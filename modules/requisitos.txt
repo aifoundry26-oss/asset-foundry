@@ -1,0 +1,12 @@
+packaging
+Flask
+pandas
+numpy
+python-docx
+EbookLib
+reportlab
+streamlit
+matplotlib
+scikit-learn
+seaborn
+requests

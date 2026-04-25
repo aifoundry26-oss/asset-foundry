@@ -1,0 +1,48 @@
+# Build and version control
+.git
+.gitignore
+.gitattributes
+.github
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# IDE and editors
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.swp
+*.swo
+
+# Local Windows scripts (don't copy into container)
+*.bat
+Iniciar_Fabrica.bat
+instalar_dashboard.bat
+
+# Documentation
+*.md
+README.md
+resumen_proyecto.md
+
+# Large files
+.agents/
+*.zip
+dataset_asset_foundry.zip
+
+# Node modules if any
+node_modules/
+
+# Temporary files
+.tmp
+*.log

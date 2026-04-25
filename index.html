@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png"
+        href="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w200">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Foundry | Librería de Autoayuda Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Personalización del Chat de n8n */
+        :root {
+            --chat--color-primary: #1D1D1F;
+            --chat--color-primary-shade-50: #2d2d2f;
+            --chat--color-secondary: #059669;
+            --chat--color-background: #FFFFFF;
+            --chat--color-font: #1D1D1F;
+            --chat--border-radius: 16px;
+            --chat--message--bot--background: #F5F5F7;
+            --chat--message--bot--color: #1D1D1F;
+            --chat--message--user--background: #1D1D1F;
+            --chat--message--user--color: #FFFFFF;
+            --chat--header--background: #1D1D1F;
+            --chat--header--color: #FFFFFF;
+            --chat--input--background: #F5F5F7;
+            --chat--input--border-color: #e5e7eb;
+            --chat--toggle--background: #000000;
+            --chat--window--width: 380px;
+            --chat--window--height: 580px;
+        }
+
+        /* Reemplazar el ícono del botón flotante por book-open (blanco) */
+        .chat-window-wrapper .chat-window-toggle svg {
+            display: none !important;
+        }
+
+        .chat-window-wrapper .chat-window-toggle::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' fill='white'%3E%3Cpath d='M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 136 32 78.1 32 22.1 49.3 2 61.2c-1.1 .7-2 2-2 3.4v402c0 10.1 9 17.5 19 15.6C73 470.4 117.7 464 152 464c51.9 0 81.3 7 97.6 7.5zM326.4 471.5c16.3-.5 45.7-7.5 97.6-7.5 34.3 0 79 6.4 133 18.2 10 2 19-5.5 19-15.6v-402c0-1.4-.9-2.7-2-3.4C553.9 49.3 497.9 32 440 32c-66.4 0-111.4 20-131 35.6-3.4 2.6-5 6.8-5 11V456c0 11.4 11.6 19.3 22.4 15.5z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .n8n-chat .chat-window {
+            border-radius: 20px !important;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18) !important;
+            border: 1px solid rgba(0, 0, 0, 0.06) !important;
+            overflow: hidden !important;
+        }
+
+        .n8n-chat .chat-window-header {
+            background: #2d2d2f !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+            padding: 16px 20px !important;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 12px !important;
+        }
+
+        .n8n-chat .chat-window-header::before {
+            content: '';
+            display: block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: #3a3a3c;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect x='20' y='6' width='24' height='20' rx='6' fill='%23e5e7eb'/%3E%3Ccircle cx='26' cy='14' r='3' fill='%232d2d2f'/%3E%3Ccircle cx='38' cy='14' r='3' fill='%232d2d2f'/%3E%3Crect x='30' y='24' width='4' height='5' rx='1' fill='%23e5e7eb'/%3E%3Crect x='10' y='30' width='44' height='26' rx='8' fill='%23e5e7eb'/%3E%3Crect x='18' y='38' width='8' height='8' rx='2' fill='%232d2d2f'/%3E%3Crect x='38' y='38' width='8' height='8' rx='2' fill='%232d2d2f'/%3E%3Crect x='26' y='42' width='12' height='3' rx='1.5' fill='%232d2d2f'/%3E%3Crect x='4' y='34' width='6' height='14' rx='3' fill='%23e5e7eb'/%3E%3Crect x='54' y='34' width='6' height='14' rx='3' fill='%23e5e7eb'/%3E%3C/svg%3E");
+            background-size: 68%;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        .n8n-chat .chat-window-title {
+            font-family: 'Playfair Display', Georgia, serif !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            color: #f3f4f6 !important;
+            letter-spacing: -0.01em !important;
+        }
+
+        .n8n-chat .chat-window-subtitle {
+            font-size: 11px !important;
+            color: #34d399 !important;
+            font-weight: 500 !important;
+        }
+
+        .n8n-chat .chat-window-header .chat-close-button {
+            margin-left: auto !important;
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .n8n-chat .chat-message {
+            border-radius: 14px !important;
+            font-size: 13.5px !important;
+            line-height: 1.55 !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .n8n-chat .chat-message.chat-message-from-bot {
+            background: #F5F5F7 !important;
+            color: #1D1D1F !important;
+            border-bottom-left-radius: 4px !important;
+        }
+
+        .n8n-chat .chat-message.chat-message-from-user {
+            background: #1D1D1F !important;
+            color: white !important;
+            border-bottom-right-radius: 4px !important;
+        }
+
+        .n8n-chat .chat-input textarea {
+            font-family: 'Inter', sans-serif !important;
+            font-size: 13px !important;
+            border-radius: 12px !important;
+            background: #F5F5F7 !important;
+        }
+
+        .n8n-chat .chat-input-send-button {
+            background: #1D1D1F !important;
+            border-radius: 50% !important;
+        }
+
+        .n8n-chat .chat-toggle {
+            background: #1D1D1F !important;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28) !important;
+            border-radius: 50% !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+
+        .light-lines {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .light-lines::before,
+        .light-lines::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(120deg,
+                    rgba(0, 0, 0, 0.03) 0px,
+                    rgba(0, 0, 0, 0.03) 1px,
+                    transparent 1px,
+                    transparent 60px);
+            animation: moveLines 20s linear infinite;
+        }
+
+        .light-lines::after {
+            animation-duration: 30s;
+            opacity: 0.5;
+        }
+
+        @keyframes moveLines {
+            from {
+                transform: translateX(-10%) translateY(-10%);
+            }
+
+            to {
+                transform: translateX(10%) translateY(10%);
+            }
+        }
+
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.7) 0%, rgba(20, 20, 20, 0.4) 50%, rgba(5, 150, 105, 0.2) 100%);
+        }
+
+        .book-float {
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-2deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+
+        .organic-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.6;
+        }
+
+        .leaf-decoration {
+            position: absolute;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        /* float legacy */
+        .float-element {
+            animation: floatLegacy 6s ease-in-out infinite;
+        }
+
+        @keyframes floatLegacy {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Lógica del selector de roles */
+        body[data-role="visitante"] .n8n-chat {
+            display: none !important;
+        }
+
+        body[data-role="visitante"] #fake-chat-system {
+            display: block !important;
+        }
+
+        body[data-role="registrado"] .n8n-chat {
+            display: block !important;
+        }
+
+        body[data-role="registrado"] #fake-chat-system {
+            display: none !important;
+        }
+
+        body[data-role="administrativo"] .n8n-chat {
+            display: none !important;
+        }
+
+        body[data-role="administrativo"] #fake-chat-system {
+            display: none !important;
+        }
+
+        #dashboard-btn {
+            display: none;
+        }
+
+        body[data-role="administrativo"] #dashboard-btn {
+            display: inline-flex;
+        }
+
+        #workflows-btn {
+            display: none;
+        }
+
+        body[data-role="administrativo"] #workflows-btn {
+            display: inline-flex;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init("yeHyktm9tGplZevPH");</script>
+</head>
+
+<body class="antialiased text-[#1D1D1F] bg-[#F5F5F7]" data-role="registrado">
+
+    <!-- Header -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-xl border-b border-black/5 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w200"
+                        alt="Asset Foundry" style="width:100%;height:100%;object-fit:contain;">
+                </div>
+                <div>
+                    <span class="font-semibold text-lg text-[#1D1D1F]">Asset Foundry</span>
+                    <span class="block text-[10px] text-gray-400 uppercase tracking-widest -mt-1">
+                        Editorial Digital
+                    </span>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="flex items-center gap-6 text-sm text-gray-600">
+                <a href="#catalogo" onclick="scrollToCatalogo(event)" class="hover:text-black transition">Catálogo</a>
+                <a href="#preview" onclick="scrollToPreview(event)" class="hover:text-black transition">Ver resumen</a>
+                <a href="/dashboard/" target="_blank" id="dashboard-btn"
+                    class="hover:text-emerald-700 transition font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full items-center gap-1">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="7" height="9" />
+                        <rect x="14" y="3" width="7" height="5" />
+                        <rect x="14" y="12" width="7" height="9" />
+                        <rect x="3" y="16" width="7" height="5" />
+                    </svg>
+                    Dashboard
+                </a>
+
+                <a href="/workflows/" target="_blank" id="workflows-btn"
+                    class="hover:text-blue-700 transition font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full items-center gap-1">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                    </svg>
+                    Workflows
+                </a>
+
+                <!-- Selector de Roles -->
+                <select id="role-selector" onchange="updateRole()"
+                    class="text-xs font-medium text-stone-600 bg-transparent border border-stone-200 rounded-md py-1.5 px-2 focus:outline-none focus:border-stone-400 cursor-pointer transition">
+                    <option value="visitante">Visitante</option>
+                    <option value="registrado" selected>Registrado</option>
+                    <option value="administrativo">Administrativo</option>
+                </select>
+
+                <!-- Botón -->
+                <button onclick="toggleCart()"
+                    class="flex items-center gap-2 px-4 py-2 hover:bg-black/5 rounded-full transition text-sm relative">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    Carrito
+                    <span id="cart-count"
+                        class="hidden absolute -top-1 -right-1 bg-emerald-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- HERO — GUION COMERCIAL, DISEÑO PREMIUM     -->
+    <!-- ========================================== -->
+    <section id="hero-story" class="relative overflow-hidden bg-[#F7F7F7]" style="min-height:calc(100vh - 72px);">
+
+        <!-- Fondos de escena que cambian suavemente -->
+        <div id="scene-bg" class="absolute inset-0 transition-all duration-700 pointer-events-none"></div>
+
+        <!-- Container principal del hero -->
+        <div class="relative z-10 w-full h-full max-w-7xl mx-auto px-8 md:px-16"
+            style="min-height:calc(100vh - 72px); display:grid; grid-template-rows:1fr auto; align-items:stretch;">
+
+            <!-- ─── ESCENA 1 (VIDEO): Esto es Asset Foundry ─── -->
+            <div id="video-scene" class="story-scene active" data-scene="1"
+                style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2rem 0 1rem;opacity:0;transition:opacity 0.6s ease;">
+
+                <!-- Título -->
+                <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;text-align:center;margin:0;">
+                    Esto es <span style="color:#10B981;">Asset Foundry</span>
+                </h1>
+
+                <!-- Reproductor de video -->
+                <div id="video-player-wrapper" style="position:relative;width:100%;max-width:860px;border-radius:18px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.18);background:#000;aspect-ratio:16/9;">
+                    <video id="hero-video" src="assets/video.mp4" preload="auto"
+                        style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+
+                    <!-- Controles custom del video -->
+                    <div id="video-controls"
+                        style="position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;gap:12px;padding:12px 18px;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 100%);transition:opacity 0.3s;">
+
+                        <!-- Play/Pause -->
+                        <button id="video-play-btn" onclick="toggleHeroVideo()"
+                            style="width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,0.2);backdrop-filter:blur(8px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.35)'"
+                            onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                            <svg id="video-play-icon" width="16" height="16" viewBox="0 0 16 16" fill="white">
+                                <rect x="3" y="3" width="3.5" height="10" rx="1" />
+                                <rect x="9.5" y="3" width="3.5" height="10" rx="1" />
+                            </svg>
+                        </button>
+
+                        <!-- Progress bar del video -->
+                        <div id="video-progress-bar" onclick="seekHeroVideo(event)"
+                            style="flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,0.25);cursor:pointer;position:relative;">
+                            <div id="video-progress-fill"
+                                style="height:100%;border-radius:4px;background:#10B981;width:0%;transition:none;pointer-events:none;"></div>
+                        </div>
+
+                        <!-- Tiempo -->
+                        <span id="video-time" style="font-size:0.7rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;min-width:70px;text-align:center;">0:00 / 0:00</span>
+
+                        <!-- Mute/Unmute -->
+                        <button id="video-mute-btn" onclick="toggleHeroMute()"
+                            style="width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,0.2);backdrop-filter:blur(8px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.35)'"
+                            onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                            <svg id="video-mute-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─── GRID 50/50 para escenas 2-7 ─── -->
+            <div id="story-grid"
+                style="display:none; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; padding:4rem 0 2rem;">
+
+                <!-- ─── COLUMNA IZQUIERDA: Texto de la escena ─── -->
+                <div id="scene-text"
+                    style="position:relative; min-height:320px; display:flex; flex-direction:column; justify-content:center;">
+
+                    <!-- Escena 1: HOOK -->
+                    <div class="story-scene" data-scene="2"
+                        style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:1.5rem;">
+                            <div
+                                style="width:6px;height:6px;border-radius:50%;background:#3B82F6;animation:pulseDot 1.5s infinite;">
+                            </div>
+                            <span
+                                style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#6B7280;font-weight:600;">El
+                                problema</span>
+                        </div>
+                        <h1
+                            style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,4.5vw,4rem);line-height:1.1;font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;">
+                            Cualquiera puede<br>decirle a una IA…
+                        </h1>
+                        <p
+                            style="font-family:'Crimson Pro',serif;font-size:clamp(1.6rem,2.8vw,2.4rem);font-style:italic;color:#9CA3AF;margin-top:0.75rem;line-height:1.3;">
+                            "hazme un libro"</p>
+                    </div>
+
+                    <!-- Escena 2: GIRO -->
+                    <div class="story-scene" data-scene="3"
+                        style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:1.5rem;">
+                            <div
+                                style="width:6px;height:6px;border-radius:50%;background:#EF4444;animation:pulseDot 1.5s infinite;">
+                            </div>
+                            <span
+                                style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#6B7280;font-weight:600;">Pero…</span>
+                        </div>
+                        <h2
+                            style="font-family:'Playfair Display',serif;font-size:clamp(2.6rem,4.5vw,4rem);line-height:1.1;font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;">
+                            Eso no significa…
+                        </h2>
+                        <p
+                            style="font-family:'Crimson Pro',serif;font-size:clamp(1.6rem,2.8vw,2.4rem);font-style:italic;color:#EF4444;margin-top:0.75rem;line-height:1.3;">
+                            que sea un buen libro.</p>
+                    </div>
+
+                    <!-- Escena 3: PROBLEMA -->
+                    <div class="story-scene" data-scene="4"
+                        style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:1.5rem;">
+                            <div
+                                style="width:6px;height:6px;border-radius:50%;background:#F59E0B;animation:pulseDot 1.5s infinite;">
+                            </div>
+                            <span
+                                style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#6B7280;font-weight:600;">El
+                                diagnóstico</span>
+                        </div>
+                        <h2
+                            style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1.15;font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;">
+                            Texto genérico.<br>Sin estructura.<br>Sin intención.<br>
+                            <em style="font-style:italic;color:#F59E0B;">Sin impacto.</em>
+                        </h2>
+                    </div>
+
+                    <!-- Escena 4: CAMBIO -->
+                    <div class="story-scene" data-scene="5"
+                        style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:1.5rem;">
+                            <div
+                                style="width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulseDot 1.5s infinite;">
+                            </div>
+                            <span
+                                style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#6B7280;font-weight:600;">El
+                                cambio</span>
+                        </div>
+                        <h2
+                            style="font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.6rem);line-height:1.1;font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;">
+                            Nosotros no<br>generamos libros…
+                        </h2>
+                        <p
+                            style="font-family:'Crimson Pro',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-style:italic;color:#10B981;margin-top:0.75rem;line-height:1.3;">
+                            los construimos.</p>
+                    </div>
+
+                    <!-- Escena 5: DIFERENCIAL -->
+                    <div class="story-scene" data-scene="6"
+                        style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:1.5rem;">
+                            <div
+                                style="width:6px;height:6px;border-radius:50%;background:#8B5CF6;animation:pulseDot 1.5s infinite;">
+                            </div>
+                            <span
+                                style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#6B7280;font-weight:600;">El
+                                diferencial</span>
+                        </div>
+                        <h2
+                            style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;margin-bottom:1rem;">
+                            Cada libro pasa por un<br><em style="color:#8B5CF6;">sistema multiagente</em>
+                        </h2>
+                        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                            <div
+                                style="display:flex;align-items:center;gap:6px;background:white;padding:8px 14px;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.06);">
+                                <div style="width:8px;height:8px;border-radius:50%;background:#FDE047;"></div>
+                                <span style="font-size:0.75rem;font-weight:600;color:#374151;">Idea</span>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:6px;background:white;padding:8px 14px;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.06);">
+                                <div style="width:8px;height:8px;border-radius:50%;background:#818CF8;"></div>
+                                <span style="font-size:0.75rem;font-weight:600;color:#374151;">Narrativa</span>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:6px;background:white;padding:8px 14px;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.06);">
+                                <div style="width:8px;height:8px;border-radius:50%;background:#34D399;"></div>
+                                <span style="font-size:0.75rem;font-weight:600;color:#374151;">Edición</span>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:6px;background:white;padding:8px 14px;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.06);">
+                                <div style="width:8px;height:8px;border-radius:50%;background:#F472B6;"></div>
+                                <span style="font-size:0.75rem;font-weight:600;color:#374151;">Perfección</span>
+                            </div>
+                        </div>
+                        <p
+                            style="font-family:'Crimson Pro',serif;font-size:1.1rem;color:#6B7280;margin-top:1rem;line-height:1.5;">
+                            No es solo IA. Es un proceso editorial<br>diseñado para crear valor real.</p>
+                    </div>
+
+                    <!-- Escena 6: RESULTADO + CTA -->
+                    <div class="story-scene" data-scene="7"
+                        style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:1.5rem;">
+                            <div
+                                style="width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulseDot 1.5s infinite;">
+                            </div>
+                            <span
+                                style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:#6B7280;font-weight:600;">El
+                                resultado</span>
+                        </div>
+                        <h2
+                            style="font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);line-height:1.1;font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;margin-bottom:0.5rem;">
+                            No es contenido.
+                        </h2>
+                        <p
+                            style="font-family:'Crimson Pro',serif;font-size:clamp(1.5rem,2.6vw,2.2rem);font-style:italic;color:#10B981;line-height:1.3;margin-bottom:1.5rem;">
+                            Es un libro que conecta,<br>que comunica… y que se siente como propio.</p>
+                        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:0.5rem;">
+                            <button onclick="scrollToCatalogo(event)"
+                                style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:#1D1D1F;color:white;border-radius:100px;font-size:0.875rem;font-weight:600;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,0.18);transition:all 0.2s;"
+                                onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,0.25)'"
+                                onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.18)'">
+                                Ver catálogo
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button onclick="scrollToPreview(event)"
+                                style="display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:transparent;color:#1D1D1F;border-radius:100px;font-size:0.875rem;font-weight:600;border:1.5px solid rgba(29,29,31,0.25);cursor:pointer;transition:all 0.2s;"
+                                onmouseover="this.style.borderColor='rgba(29,29,31,0.7)'"
+                                onmouseout="this.style.borderColor='rgba(29,29,31,0.25)'">
+                                Leer muestra gratis
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ─── COLUMNA DERECHA: Visual de la escena ─── -->
+                <div id="scene-visual"
+                    style="position:relative;min-height:380px;display:flex;align-items:center;justify-content:center;">
+
+                    <!-- Visual 1: Curiosidad — persona tecleando "hazme un libro" -->
+                    <div class="story-visual" data-visual="2"
+                        style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800"
+                            alt=""
+                            style="position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;object-fit:contain;opacity:0.06;filter:grayscale(100%);pointer-events:none;z-index:0;">
+                        <div style="position:relative;width:300px;height:340px;">
+                            <div
+                                style="width:100%;height:100%;border-radius:20px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.13);">
+                                <img src="https://drive.google.com/thumbnail?id=1SC1C9sNtlmUNbshdriGGi1Olm6z-6fKP&sz=w600"
+                                    style="width:100%;height:100%;object-fit:cover;" alt="" />
+                                <div
+                                    style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.35) 0%,transparent 55%);">
+                                </div>
+                            </div>
+                            <!-- Chip de contexto -->
+                            <div
+                                style="position:absolute;bottom:20px;left:16px;right:16px;background:white;border-radius:12px;padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);display:flex;align-items:center;gap:10px;">
+                                <div
+                                    style="width:8px;height:8px;border-radius:50%;background:#3B82F6;flex-shrink:0;animation:pulseDot 1.5s infinite;">
+                                </div>
+                                <span
+                                    style="font-size:0.72rem;font-weight:600;color:#374151;font-family:'Inter',sans-serif;">"hazme
+                                    un libro sobre productividad"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 2: Decepción — persona mirando libro con cara de "esto no sirve" -->
+                    <div class="story-visual" data-visual="3"
+                        style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800"
+                            alt=""
+                            style="position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;object-fit:contain;opacity:0.06;filter:grayscale(100%);pointer-events:none;z-index:0;">
+                        <div style="position:relative;width:300px;height:340px;">
+                            <div
+                                style="width:100%;height:100%;border-radius:20px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.13);">
+                                <img src="https://drive.google.com/thumbnail?id=1l4nkaTLmveSqUC5KafsUxayGRyRlLXee&sz=w600"
+                                    style="width:100%;height:100%;object-fit:cover;" alt="" />
+                                <div
+                                    style="position:absolute;inset:0;background:linear-gradient(to top,rgba(239,68,68,0.25) 0%,transparent 60%);">
+                                </div>
+                            </div>
+                            <div
+                                style="position:absolute;bottom:20px;left:16px;right:16px;background:white;border-radius:12px;padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);display:flex;align-items:center;gap:10px;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;">
+                                    <circle cx="8" cy="8" r="7" stroke="#EF4444" stroke-width="1.5" />
+                                    <path d="M5 5l6 6M11 5l-6 6" stroke="#EF4444" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                                <span style="font-size:0.72rem;font-weight:600;color:#374151;">Esto no me representa
+                                    para nada.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 3: Frustración — persona abrumada con texto genérico -->
+                    <div class="story-visual" data-visual="4"
+                        style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800"
+                            alt=""
+                            style="position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;object-fit:contain;opacity:0.06;filter:grayscale(100%);pointer-events:none;z-index:0;">
+                        <div style="position:relative;width:300px;height:340px;">
+                            <div
+                                style="width:100%;height:100%;border-radius:20px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.13);">
+                                <img src="https://drive.google.com/thumbnail?id=1GjsVa-PEPMyve24jlAXinsJSCg3PBhb1&sz=w600"
+                                    style="width:100%;height:100%;object-fit:cover;" alt="" />
+                                <div
+                                    style="position:absolute;inset:0;background:linear-gradient(to top,rgba(245,158,11,0.3) 0%,transparent 60%);">
+                                </div>
+                            </div>
+                            <div
+                                style="position:absolute;bottom:20px;left:16px;right:16px;background:white;border-radius:12px;padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);display:flex;align-items:center;gap:10px;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;">
+                                    <path d="M8 2v6M8 11v2" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+                                    <circle cx="8" cy="8" r="7" stroke="#F59E0B" stroke-width="1.5" />
+                                </svg>
+                                <span style="font-size:0.72rem;font-weight:600;color:#374151;">Genérico. Sin alma. Sin
+                                    impacto.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 4: Determinación — persona trabajando con foco -->
+                    <div class="story-visual" data-visual="5"
+                        style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800"
+                            alt=""
+                            style="position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;object-fit:contain;opacity:0.06;filter:grayscale(100%);pointer-events:none;z-index:0;">
+                        <div style="position:relative;width:300px;height:340px;">
+                            <div
+                                style="width:100%;height:100%;border-radius:20px;overflow:hidden;box-shadow:0 20px 48px rgba(0,0,0,0.13);">
+                                <img src="https://drive.google.com/thumbnail?id=1tSOPWws9p5El6NfEbFUuxDgohhPRxj57&sz=w600"
+                                    style="width:100%;height:100%;object-fit:cover;" alt="" />
+                                <div
+                                    style="position:absolute;inset:0;background:linear-gradient(to top,rgba(16,185,129,0.3) 0%,transparent 60%);">
+                                </div>
+                            </div>
+                            <div
+                                style="position:absolute;bottom:20px;left:16px;right:16px;background:white;border-radius:12px;padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);display:flex;align-items:center;gap:10px;">
+                                <div
+                                    style="width:8px;height:8px;border-radius:50%;background:#10B981;flex-shrink:0;animation:pulseDot 1.2s infinite;">
+                                </div>
+                                <span style="font-size:0.72rem;font-weight:600;color:#374151;">Construyendo cada página
+                                    con intención.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 5: Pipeline multiagente (sin foto — es técnico) -->
+                    <div class="story-visual" data-visual="6"
+                        style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800"
+                            alt=""
+                            style="position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;object-fit:contain;opacity:0.06;filter:grayscale(100%);pointer-events:none;z-index:0;">
+                        <div style="display:flex;flex-direction:column;gap:12px;width:260px;">
+                            <div
+                                style="display:flex;align-items:center;gap:12px;background:white;padding:14px 18px;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.07);border:1px solid #F3F4F6;animation:slideInRow 0.5s ease forwards;opacity:0;animation-delay:0.1s;">
+                                <div
+                                    style="width:36px;height:36px;border-radius:10px;background:#FEF9C3;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid #1D1D1F;">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 2v5l3 2" stroke="#1D1D1F" stroke-width="1.8"
+                                            stroke-linecap="round" />
+                                        <circle cx="9" cy="9" r="7" stroke="#1D1D1F" stroke-width="1.8" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p style="font-size:0.8rem;font-weight:700;color:#1D1D1F;margin:0;">Agente Idea</p>
+                                    <p style="font-size:0.7rem;color:#9CA3AF;margin:0;">Estructura narrativa</p>
+                                </div>
+                                <div
+                                    style="margin-left:auto;width:8px;height:8px;border-radius:50%;background:#10B981;">
+                                </div>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:12px;background:white;padding:14px 18px;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.07);border:1px solid #F3F4F6;animation:slideInRow 0.5s ease forwards;opacity:0;animation-delay:0.25s;">
+                                <div
+                                    style="width:36px;height:36px;border-radius:10px;background:#EDE9FE;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid #1D1D1F;">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M3 15l5-5M10 3l5 5-8 8-5-5z" stroke="#1D1D1F" stroke-width="1.8"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p style="font-size:0.8rem;font-weight:700;color:#1D1D1F;margin:0;">Agente Narrativa
+                                    </p>
+                                    <p style="font-size:0.7rem;color:#9CA3AF;margin:0;">Escritura con voz</p>
+                                </div>
+                                <div
+                                    style="margin-left:auto;width:8px;height:8px;border-radius:50%;background:#10B981;">
+                                </div>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:12px;background:white;padding:14px 18px;border-radius:14px;box-shadow:0 4px 16px rgba(0,0,0,0.07);border:1px solid #F3F4F6;animation:slideInRow 0.5s ease forwards;opacity:0;animation-delay:0.4s;">
+                                <div
+                                    style="width:36px;height:36px;border-radius:10px;background:#D1FAE5;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid #1D1D1F;">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M4 9l4 4 6-6" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p style="font-size:0.8rem;font-weight:700;color:#1D1D1F;margin:0;">Agente Edición
+                                    </p>
+                                    <p style="font-size:0.7rem;color:#9CA3AF;margin:0;">Claridad y ritmo</p>
+                                </div>
+                                <div
+                                    style="margin-left:auto;width:8px;height:8px;border-radius:50%;background:#10B981;">
+                                </div>
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:12px;background:#1D1D1F;padding:14px 18px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.2);animation:slideInRow 0.5s ease forwards;opacity:0;animation-delay:0.55s;">
+                                <div
+                                    style="width:36px;height:36px;border-radius:10px;background:#10B981;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M9 2l2 5h5l-4 3 1.5 5L9 12l-4.5 3L6 10 2 7h5z" fill="white" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p style="font-size:0.8rem;font-weight:700;color:white;margin:0;">Agente Perfección
+                                    </p>
+                                    <p style="font-size:0.7rem;color:#6B7280;margin:0;">Revisión final</p>
+                                </div>
+                                <div
+                                    style="margin-left:auto;width:8px;height:8px;border-radius:50%;background:#10B981;animation:pulseDot 1s infinite;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 6: Abanico de 3 portadas Asset Foundry -->
+                    <div class="story-visual" data-visual="7"
+                        style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.6s ease;">
+                        <!-- Marca de agua logo -->
+                        <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800"
+                            alt=""
+                            style="position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;object-fit:contain;opacity:0.06;filter:grayscale(100%);pointer-events:none;z-index:0;">
+                        <div
+                            style="position:relative;width:320px;height:340px;display:flex;align-items:center;justify-content:center;">
+                            <!-- Portada izquierda — El Filtro de la Calma -->
+                            <div
+                                style="position:absolute;left:0px;top:20px;width:140px;height:190px;border-radius:12px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.18);transform:rotate(-8deg);z-index:1;">
+                                <img src="https://drive.google.com/thumbnail?id=1j721vuNFLZWOPK6U55-PUSrWsMUX6_xO&sz=w400"
+                                    style="width:100%;height:100%;object-fit:cover;" alt="El Filtro de la Calma" />
+                            </div>
+                            <!-- Portada derecha — Navegando el Futuro -->
+                            <div
+                                style="position:absolute;right:0px;top:20px;width:140px;height:190px;border-radius:12px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.18);transform:rotate(8deg);z-index:1;">
+                                <img src="https://drive.google.com/thumbnail?id=1qfNnfR84SkgTVBgYIQxvDFKnfl8LhPfw&sz=w400"
+                                    style="width:100%;height:100%;object-fit:cover;" alt="Navegando el Futuro" />
+                            </div>
+                            <!-- Portada central — Micro-Alegría -->
+                            <div
+                                style="position:relative;width:155px;height:210px;border-radius:14px;overflow:hidden;box-shadow:0 24px 56px rgba(0,0,0,0.22);z-index:2;">
+                                <img src="https://drive.google.com/thumbnail?id=1DS8YigEjcaEe2ULSX2RWRIWhGbdI7Rda&sz=w400"
+                                    style="width:100%;height:100%;object-fit:cover;"
+                                    alt="El Arte de la Micro-Alegría" />
+                            </div>
+                            <!-- Badge inferior -->
+                            <div
+                                style="position:absolute;bottom:0px;left:50%;transform:translateX(-50%);background:white;border-radius:12px;padding:10px 14px;box-shadow:0 4px 16px rgba(0,0,0,0.12);display:flex;align-items:center;gap:10px;white-space:nowrap;">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;">
+                                    <path d="M8 14S1 10 1 5.5a3.5 3.5 0 017-1 3.5 3.5 0 017 1C15 10 8 14 8 14z"
+                                        fill="#EF4444" />
+                                </svg>
+                                <span style="font-size:0.72rem;font-weight:600;color:#374151;">Un libro que se siente
+                                    como propio.</span>
+                            </div>
+                            <div
+                                style="position:absolute;top:-10px;right:-10px;font-size:1.3rem;color:#10B981;animation:sparkle 2.5s ease-in-out infinite;">
+                                ✦</div>
+                            <div
+                                style="position:absolute;top:24px;left:-12px;font-size:0.9rem;color:#F59E0B;animation:sparkle 2.5s ease-in-out infinite 1s;">
+                                ✦</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ─── BARRA DE PROGRESO + CONTROLES ─── -->
+            <div style="padding-bottom:2.5rem;display:flex;align-items:center;gap:16px;">
+
+                <!-- Barra de progreso por escena -->
+                <div style="display:flex;gap:4px;flex:1;">
+                    <div class="prog-bar" data-bar="1"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(1)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                    <div class="prog-bar" data-bar="2"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(2)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                    <div class="prog-bar" data-bar="3"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(3)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                    <div class="prog-bar" data-bar="4"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(4)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                    <div class="prog-bar" data-bar="5"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(5)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                    <div class="prog-bar" data-bar="6"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(6)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                    <div class="prog-bar" data-bar="7"
+                        style="height:2px;border-radius:2px;background:#E5E7EB;flex:1;overflow:hidden;cursor:pointer;opacity:0.6;"
+                        onclick="jumpScene(7)">
+                        <div
+                            style="height:100%;background:#9CA3AF;width:0%;transition:width 0.1s linear;border-radius:2px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <div style="display:flex;align-items:center;gap:8px;">
+                    <button onclick="prevStoryScene()"
+                        style="width:26px;height:26px;border-radius:50%;border:1px solid #E5E7EB;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0.5;transition:opacity 0.2s;"
+                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M7 1L3 5l4 4" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button onclick="toggleStoryPlay()" id="story-play-btn"
+                        style="width:26px;height:26px;border-radius:50%;border:1px solid #E5E7EB;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0.5;transition:opacity 0.2s;"
+                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
+                        <svg id="play-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <rect x="1.5" y="1.5" width="2.5" height="7" rx="1" fill="#6B7280" />
+                            <rect x="6" y="1.5" width="2.5" height="7" rx="1" fill="#6B7280" />
+                        </svg>
+                    </button>
+                    <button onclick="nextStoryScene()"
+                        style="width:26px;height:26px;border-radius:50%;border:1px solid #E5E7EB;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0.5;transition:opacity 0.2s;"
+                        onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.5'">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M3 1l4 4-4 4" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Contador escena -->
+                <span id="scene-counter"
+                    style="font-size:0.65rem;color:#D1D5DB;font-weight:500;min-width:28px;text-align:right;">1 /
+                    7</span>
+
+            </div>
+        </div>
+
+    </section>
+
+    <style>
+        /* Fondo gris muy suave */
+        .bg-scene-1,
+        .bg-scene-2,
+        .bg-scene-3,
+        .bg-scene-4,
+        .bg-scene-5,
+        .bg-scene-6,
+        .bg-scene-7 {
+            background: #F7F7F7;
+        }
+
+        @keyframes robotFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-1deg);
+            }
+
+            50% {
+                transform: translateY(-14px) rotate(1deg);
+            }
+        }
+
+        @keyframes waveArm {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(6deg);
+            }
+        }
+
+        @keyframes blinkEye {
+
+            0%,
+            88%,
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            92% {
+                opacity: 0.2;
+                transform: scaleY(0.1);
+            }
+        }
+
+        @keyframes pulseDot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(0.75);
+            }
+        }
+
+        @keyframes bookFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(-1deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(0.5deg);
+            }
+        }
+
+        @keyframes bookPulse {
+
+            0%,
+            100% {
+                box-shadow: -6px 6px 0 #0a0a0a, 0 30px 50px rgba(0, 0, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: -6px 6px 0 #0a0a0a, 0 30px 50px rgba(16, 185, 129, 0.25);
+            }
+        }
+
+        @keyframes toolFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(-5deg);
+            }
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.15);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.7) rotate(20deg);
+            }
+        }
+
+        @keyframes slideInRow {
+            from {
+                opacity: 0;
+                transform: translateX(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+
+    <script>
+        // HERO STORYTELLING CONTROLLER
+        let storyScene = 1;
+        const storyTotal = 7;
+        // Scene 1 = video (duration handled by video 'ended' event), scenes 2-7 = timed
+        const storyDurations = [0, 4000, 4000, 5000, 5000, 7000, 9000];
+        let storyPlaying = true;
+        let storyTimer = null;
+        let storyProgress = null;
+        let progressStart = null;
+        let progressDuration = 0;
+        let heroVideoPlaying = false;
+
+        const sceneBgs = ['bg-scene-1', 'bg-scene-2', 'bg-scene-3', 'bg-scene-4', 'bg-scene-5', 'bg-scene-6', 'bg-scene-7'];
+
+        function showStoryScene(n) {
+            // Manage video scene visibility
+            const videoScene = document.getElementById('video-scene');
+            const storyGrid = document.getElementById('story-grid');
+            const heroVideo = document.getElementById('hero-video');
+
+            if (n === 1) {
+                // Show video scene, hide grid
+                videoScene.style.display = 'flex';
+                storyGrid.style.display = 'none';
+            } else {
+                // Hide video scene, show grid
+                videoScene.style.display = 'none';
+                videoScene.style.opacity = '0';
+                storyGrid.style.display = 'grid';
+                // Pause video when leaving scene 1
+                if (heroVideo && !heroVideo.paused) {
+                    heroVideo.pause();
+                    heroVideoPlaying = false;
+                }
+            }
+
+            // Textos (scenes 2-7 in the grid)
+            document.querySelectorAll('#story-grid .story-scene').forEach(el => el.style.opacity = '0');
+            if (n === 1) {
+                setTimeout(() => videoScene.style.opacity = '1', 50);
+            } else {
+                const txt = document.querySelector(`#story-grid .story-scene[data-scene="${n}"]`);
+                if (txt) setTimeout(() => txt.style.opacity = '1', 50);
+            }
+
+            // Visuales (scenes 2-7)
+            document.querySelectorAll('.story-visual').forEach(el => el.style.opacity = '0');
+            if (n > 1) {
+                const vis = document.querySelector(`.story-visual[data-visual="${n}"]`);
+                if (vis) {
+                    setTimeout(() => vis.style.opacity = '1', 50);
+                    // Reiniciar animaciones de la escena 6 (antes era 5)
+                    if (n === 6) {
+                        vis.querySelectorAll('[style*="slideInRow"]').forEach((el, i) => {
+                            el.style.animation = 'none';
+                            el.offsetHeight;
+                            el.style.animation = `slideInRow 0.5s ease forwards`;
+                            el.style.animationDelay = `${0.1 + i * 0.15}s`;
+                        });
+                    }
+                }
+            }
+
+            // Fondo
+            const bg = document.getElementById('scene-bg');
+            sceneBgs.forEach(c => bg.classList.remove(c));
+            bg.classList.add(sceneBgs[n - 1]);
+
+            // Progreso
+            document.querySelectorAll('.prog-bar div').forEach(el => el.style.width = '0%');
+            // Llenar barras previas
+            for (let i = 1; i < n; i++) {
+                const bar = document.querySelector(`.prog-bar[data-bar="${i}"] div`);
+                if (bar) bar.style.width = '100%';
+            }
+
+            // Contador
+            document.getElementById('scene-counter').textContent = `${n} / ${storyTotal}`;
+
+            storyScene = n;
+        }
+
+        function animateProgress(barN, duration) {
+            const bar = document.querySelector(`.prog-bar[data-bar="${barN}"] div`);
+            if (!bar) return;
+            bar.style.transition = 'none';
+            bar.style.width = '0%';
+            bar.offsetHeight;
+            bar.style.transition = `width ${duration}ms linear`;
+            bar.style.width = '100%';
+        }
+
+        function startStoryTimer() {
+            clearTimeout(storyTimer);
+            if (!storyPlaying) return;
+
+            // Scene 1 = video: don't use a timer, let the video 'ended' event handle it
+            if (storyScene === 1) {
+                const heroVideo = document.getElementById('hero-video');
+                if (heroVideo) {
+                    heroVideo.currentTime = 0;
+                    heroVideo.play().then(() => {
+                        heroVideoPlaying = true;
+                        updateVideoPlayIcon();
+                    }).catch(() => {
+                        // Autoplay blocked: start muted
+                        heroVideo.muted = true;
+                        updateMuteIcon();
+                        heroVideo.play().then(() => {
+                            heroVideoPlaying = true;
+                            updateVideoPlayIcon();
+                        });
+                    });
+                }
+                return; // No setTimeout for scene 1
+            }
+
+            const dur = storyDurations[storyScene - 1];
+            animateProgress(storyScene, dur);
+            storyTimer = setTimeout(() => {
+                if (storyScene < storyTotal) {
+                    showStoryScene(storyScene + 1);
+                    startStoryTimer();
+                } else {
+                    storyPlaying = false;
+                    updatePlayBtn();
+                }
+            }, dur);
+        }
+
+        function nextStoryScene() {
+            if (storyScene < storyTotal) {
+                showStoryScene(storyScene + 1);
+                startStoryTimer();
+            }
+        }
+
+        function prevStoryScene() {
+            if (storyScene > 1) {
+                showStoryScene(storyScene - 1);
+                startStoryTimer();
+            }
+        }
+
+        function jumpScene(n) {
+            showStoryScene(n);
+            startStoryTimer();
+        }
+
+        function toggleStoryPlay() {
+            storyPlaying = !storyPlaying;
+            updatePlayBtn();
+            if (storyPlaying) {
+                if (storyScene >= storyTotal) { showStoryScene(1); }
+                startStoryTimer();
+            } else {
+                clearTimeout(storyTimer);
+                // Detener barra
+                const bar = document.querySelector(`.prog-bar[data-bar="${storyScene}"] div`);
+                if (bar) bar.style.transition = 'none';
+                // Pause video if on scene 1
+                if (storyScene === 1) {
+                    const heroVideo = document.getElementById('hero-video');
+                    if (heroVideo && !heroVideo.paused) {
+                        heroVideo.pause();
+                        heroVideoPlaying = false;
+                        updateVideoPlayIcon();
+                    }
+                }
+            }
+        }
+
+        function updatePlayBtn() {
+            const icon = document.getElementById('play-icon');
+            if (!icon) return;
+            icon.innerHTML = storyPlaying
+                ? '<rect x="2" y="2" width="3" height="8" rx="1" fill="#1D1D1F"/><rect x="7" y="2" width="3" height="8" rx="1" fill="#1D1D1F"/>'
+                : '<path d="M3 2l8 5-8 5V2z" fill="#1D1D1F"/>';
+        }
+
+        // ─── VIDEO CONTROLS ───
+        function toggleHeroVideo() {
+            const video = document.getElementById('hero-video');
+            if (!video) return;
+            if (video.paused) {
+                video.play();
+                heroVideoPlaying = true;
+            } else {
+                video.pause();
+                heroVideoPlaying = false;
+            }
+            updateVideoPlayIcon();
+        }
+
+        function updateVideoPlayIcon() {
+            const icon = document.getElementById('video-play-icon');
+            if (!icon) return;
+            if (heroVideoPlaying) {
+                icon.innerHTML = '<rect x="3" y="3" width="3.5" height="10" rx="1" /><rect x="9.5" y="3" width="3.5" height="10" rx="1" />';
+            } else {
+                icon.innerHTML = '<path d="M4 2l10 6-10 6V2z" />';
+            }
+        }
+
+        function toggleHeroMute() {
+            const video = document.getElementById('hero-video');
+            if (!video) return;
+            video.muted = !video.muted;
+            updateMuteIcon();
+        }
+
+        function updateMuteIcon() {
+            const icon = document.getElementById('video-mute-icon');
+            const video = document.getElementById('hero-video');
+            if (!icon || !video) return;
+            if (video.muted) {
+                icon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
+            } else {
+                icon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
+            }
+        }
+
+        function seekHeroVideo(event) {
+            const video = document.getElementById('hero-video');
+            const bar = document.getElementById('video-progress-bar');
+            if (!video || !bar) return;
+            const rect = bar.getBoundingClientRect();
+            const pct = (event.clientX - rect.left) / rect.width;
+            video.currentTime = pct * video.duration;
+        }
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return `${m}:${s.toString().padStart(2, '0')}`;
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            showStoryScene(1);
+            startStoryTimer();
+
+            // Video progress and ended handling
+            const heroVideo = document.getElementById('hero-video');
+            if (heroVideo) {
+                heroVideo.addEventListener('timeupdate', () => {
+                    if (!heroVideo.duration) return;
+                    const pct = (heroVideo.currentTime / heroVideo.duration) * 100;
+                    const fill = document.getElementById('video-progress-fill');
+                    if (fill) fill.style.width = pct + '%';
+                    // Also animate the progress bar for scene 1
+                    const progBar = document.querySelector('.prog-bar[data-bar="1"] div');
+                    if (progBar && storyScene === 1) {
+                        progBar.style.transition = 'none';
+                        progBar.style.width = pct + '%';
+                    }
+                    // Update time display
+                    const timeEl = document.getElementById('video-time');
+                    if (timeEl) {
+                        timeEl.textContent = `${formatTime(heroVideo.currentTime)} / ${formatTime(heroVideo.duration)}`;
+                    }
+                });
+
+                heroVideo.addEventListener('ended', () => {
+                    heroVideoPlaying = false;
+                    updateVideoPlayIcon();
+                    // Auto-advance to next scene when video ends
+                    if (storyScene === 1 && storyPlaying) {
+                        setTimeout(() => {
+                            showStoryScene(2);
+                            startStoryTimer();
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Filtros -->
+
+    <section id="catalogo" class="py-12 px-6 bg-white border-b border-stone-100 z-40" style="scroll-margin-top: 72px;">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h2 class="font-display text-2xl font-bold text-stone-900">Nuestros libros</h2>
+                <p class="text-stone-500 text-sm">Herramientas para tu transformación personal</p>
+            </div>
+            <div class="flex gap-3">
+                <span
+                    class="px-5 py-2.5 rounded-full bg-stone-900 text-white text-sm font-medium flex items-center gap-2">
+                    <!-- Silueta buda SVG -->
+                    <svg width="18" height="18" viewBox="0 0 100 120" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cabeza con moño -->
+                        <ellipse cx="50" cy="18" rx="14" ry="14" />
+                        <ellipse cx="50" cy="7" rx="6" ry="5" />
+                        <!-- Cuello -->
+                        <rect x="45" y="30" width="10" height="8" rx="3" />
+                        <!-- Torso -->
+                        <path d="M28 38 Q50 34 72 38 L68 72 Q50 76 32 72 Z" />
+                        <!-- Brazos doblados (mudra) -->
+                        <path d="M28 42 Q18 52 22 62 Q28 66 34 60 Q32 52 36 46" />
+                        <path d="M72 42 Q82 52 78 62 Q72 66 66 60 Q68 52 64 46" />
+                        <!-- Manos unidas al centro -->
+                        <ellipse cx="50" cy="68" rx="10" ry="6" />
+                        <!-- Piernas cruzadas -->
+                        <path d="M32 72 Q20 85 25 95 Q50 100 75 95 Q80 85 68 72 Q50 78 32 72Z" />
+                    </svg>
+                    Mindfulness
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section id="libros" class="py-16 px-6 bg-stone-50">
+        <div class="max-w-7xl mx-auto">
+            <div id="books-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Libros renderizados con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Preview Section -->
+    <section id="preview" class="py-24 px-6 bg-[#F5F5F7] text-[#1D1D1F] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
+            </div>
+        </div>
+        <!-- Marca de agua logo gigante -->
+        <div class="absolute pointer-events-none"
+            style="z-index:1; left:calc(50% + 60px); top:50%; transform:translateY(-50%);">
+            <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w800" alt=""
+                style="width:560px;height:560px;object-fit:contain;opacity:0.07;filter:grayscale(100%);">
+        </div>
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">Conoce el libro antes de comprarlo</h2>
+            <p class="text-gray-500 text-lg mb-10 max-w-xl mx-auto">Sin compromiso, sin spam. Solo el resumen que
+                necesitas.</p>
+
+            <!-- Botón trigger -->
+            <div id="resumen-trigger">
+                <button onclick="abrirFormResumen()"
+                    class="inline-flex items-center gap-3 px-8 py-4 bg-black text-white font-semibold rounded-full hover:opacity-80 transition text-sm shadow-lg">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Quiero mi resumen gratis
+                </button>
+                <p class="text-xs text-gray-400 mt-3">Elige el libro y te lo enviamos al instante</p>
+            </div>
+
+            <!-- Formulario desplegable -->
+            <div id="resumen-form-wrap"
+                style="max-height:0;overflow:hidden;transition:max-height 0.5s cubic-bezier(0.4,0,0.2,1),opacity 0.4s ease;opacity:0;">
+                <div class="bg-white p-8 rounded-3xl max-w-md mx-auto shadow-lg mt-6 text-left">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-semibold text-stone-800 text-base">A donde te lo enviamos?</h3>
+                        <button onclick="cerrarFormResumen()" class="text-stone-400 hover:text-stone-600 transition">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round">
+                                <path d="M18 6L6 18M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1.5">Tu
+                            correo</label>
+                        <input id="resumen-email" type="email" placeholder="tu@email.com"
+                            class="w-full px-4 py-3 rounded-xl border border-stone-200 text-black placeholder-gray-300 focus:outline-none focus:border-stone-400 text-sm transition">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1.5">Que
+                            libro te interesa?</label>
+                        <select id="resumen-libro"
+                            class="w-full px-4 py-3 rounded-xl border border-stone-200 text-black focus:outline-none focus:border-stone-400 text-sm transition bg-white">
+                            <option value="">Selecciona un libro</option>
+                            <option>El Arte de la Micro-Alegría</option>
+                            <option>Tu Oasis Digital</option>
+                            <option>El Refugio Digital</option>
+                            <option>Conexión Real</option>
+                            <option>Navegando el Futuro</option>
+                            <option>Silencio Digital</option>
+                            <option>El Filtro de la Calma</option>
+                            <option>La Sabiduría del No</option>
+                            <option>El Arte de la Micro-Pausa</option>
+                        </select>
+                    </div>
+                    <button onclick="enviarResumen()"
+                        class="w-full py-3.5 bg-black text-white font-semibold rounded-xl hover:opacity-80 transition text-sm">
+                        Enviarme el resumen gratis
+                    </button>
+                    <p id="resumen-msg" class="text-center text-sm mt-4 hidden"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-stone-950 text-stone-400 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <div
+                    style="display:inline-flex;align-items:center;gap:10px;background:white;border-radius:100px;padding:6px 18px 6px 8px;">
+                    <img src="https://drive.google.com/thumbnail?id=18c3_1tlDhQRfgI0vcFHiesWbo-Xb-f1s&sz=w200"
+                        alt="Asset Foundry" style="width:30px;height:30px;object-fit:contain;">
+                    <span class="font-display text-base font-bold" style="color:#1D1D1F;">Asset Foundry</span>
+                </div>
+            </div>
+            <div class="flex gap-8 text-sm">
+                <a href="#" class="hover:text-emerald-400 transition">Términos</a>
+                <a href="#" class="hover:text-emerald-400 transition">Privacidad</a>
+                <a href="#" class="hover:text-emerald-400 transition">Contacto</a>
+            </div>
+            <p class="text-xs">© 2026 Asset Foundry. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Panel lateral del carrito -->
+    <div id="cart-overlay" onclick="toggleCart()" class="fixed inset-0 bg-black/40 z-50 hidden transition-opacity">
+    </div>
+    <div id="cart-modal"
+        class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+        <div class="p-5 border-b border-stone-200 flex justify-between items-center flex-shrink-0">
+            <h3 class="font-display text-xl font-bold">Tu Carrito</h3>
+            <button onclick="toggleCart()" class="p-2 hover:bg-stone-100 rounded-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2"
+                    stroke-linecap="round">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-5 space-y-4"></div>
+        <div id="cart-footer" class="p-5 border-t border-stone-200 hidden flex-shrink-0">
+            <div class="flex justify-between items-center mb-4">
+                <span class="font-semibold text-lg">Total</span>
+                <span id="cart-total" class="font-bold text-2xl text-emerald-600">$0.00</span>
+            </div>
+            <button onclick="checkout()"
+                class="w-full py-3.5 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 transition mb-3">
+                Proceder al Pago
+            </button>
+            <button onclick="toggleCart()"
+                class="w-full py-3 border border-stone-200 text-stone-600 font-medium rounded-xl hover:bg-stone-50 transition text-sm">
+                Seguir comprando
+            </button>
+        </div>
+        <div id="cart-empty" class="flex-1 flex flex-col items-center justify-center text-stone-400 p-12">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                stroke-linecap="round" stroke-linejoin="round" class="mb-3 opacity-30">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <p class="text-sm">Tu carrito está vacío</p>
+        </div>
+    </div>
+
+    <script>
+        // Catálogo de libros
+        const books = [
+            {
+                id: 1,
+                title: "El Arte de la Micro-Alegría",
+                subtitle: "Redescubre la Felicidad en lo Cotidiano",
+                image: "https://drive.google.com/thumbnail?id=1DS8YigEjcaEe2ULSX2RWRIWhGbdI7Rda&sz=w600",
+                category: "mindfulness",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Aprende a encontrar chispas de gozo en la rutina diaria. Un permiso para desacelerar, ser imperfecto y descubrir que la plenitud está en los momentos ordinarios.",
+                badge: "Nuevo"
+            },
+            {
+                id: 2,
+                title: "Tu Oasis Digital",
+                subtitle: "Florece en un Mundo Hiperconectado",
+                image: "https://drive.google.com/thumbnail?id=16_ddWW3zlDVQNC5IsGddFjVHUdY24HN-&sz=w600",
+                category: "bienestar-digital",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Deja de ser combustible de los algoritmos. Aprende a construir tu propio espacio digital donde la tecnología trabaja para ti y recuperas la soberanía sobre tu atención.",
+                badge: "Nuevo"
+            },
+            {
+                id: 3,
+                title: "El Refugio Digital",
+                subtitle: "Recupera tu Atención, Recupera tu Vida",
+                image: "https://drive.google.com/thumbnail?id=1SO_y9I90I67pyBLSiNAuOLEqSCVX3E1W&sz=w600",
+                category: "bienestar-digital",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Tu atención es el recurso más sagrado que posees. Aprende a construir límites digitales reales y recuperar la presencia que los algoritmos te han robado.",
+                badge: "Nuevo"
+            },
+            {
+                id: 4,
+                title: "Conexión Real",
+                subtitle: "Cultivando Vínculos Auténticos en la Era Digital",
+                image: "https://drive.google.com/thumbnail?id=1J4hYP2BrrAkdJXflDVGV-VYllrh35r5S&sz=w600",
+                category: "bienestar-digital",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "¿Tienes cientos de contactos pero nadie a quien llamar en una crisis? Aprende a construir vínculos que te hagan sentir presente, visto y valorado.",
+                badge: "Nuevo"
+            },
+            {
+                id: 5,
+                title: "Navegando el Futuro",
+                subtitle: "Autoayuda en la Era de la Inteligencia Artificial",
+                image: "https://drive.google.com/thumbnail?id=1qfNnfR84SkgTVBgYIQxvDFKnfl8LhPfw&sz=w600",
+                category: "bienestar-digital",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Aprende a convivir con la IA sin perder tu esencia. Una guía para crecer, adaptarte y florecer en la era de la inteligencia artificial.",
+                badge: "Nuevo"
+            },
+            {
+                id: 6,
+                title: "Silencio Digital",
+                subtitle: "Encuentra tu Calma en un Mundo Conectado",
+                image: "https://drive.google.com/thumbnail?id=1j721vuNFLZWOPK6U55-PUSrWsMUX6_xO&sz=w600",
+                category: "mindfulness",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Tu mente es una colección de pestañas abiertas que nunca logras cerrar. Aprende a recuperar la soberanía de tu atención y encontrar calma en medio del ruido.",
+                badge: "Nuevo"
+            },
+            {
+                id: 7,
+                title: "El Filtro de la Calma",
+                subtitle: "Navega el Ruido y Reencuentra Tu Señal Interna",
+                image: "https://drive.google.com/thumbnail?id=1f6DfD5sLIbnOz_cUJfcGB0-NVllt4ILw&sz=w600",
+                category: "mindfulness",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Construye una membrana inteligente que filtre el ruido digital, social y mental para reconectar con tu voz interna y tomar decisiones auténticas.",
+                badge: "Nuevo"
+            },
+            {
+                id: 8,
+                title: "La Sabiduría del No",
+                subtitle: "Cómo Recuperar Tu Tiempo y Energía en un Mundo de Síes",
+                image: "https://drive.google.com/thumbnail?id=13mUmQJsAz9gL6XwSVKX9TCBxbjqK3kq6&sz=w600",
+                category: "mindfulness",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "Cada 'sí' sin pensar es un 'no' a ti mismo. Aprende a poner límites con claridad y recupera el control de tu tiempo, tu energía y tu vida.",
+                badge: "Nuevo"
+            },
+            {
+                id: 9,
+                title: "El Arte de la Micro-Pausa",
+                subtitle: "Recargando tu Energía en un Mundo Siempre Conectado",
+                image: "https://drive.google.com/thumbnail?id=1Auvu4N78GhzstdIO6IFW6t8igLMbSFQK&sz=w600",
+                category: "bienestar-digital",
+                price: 5.00,
+                originalPrice: 12.99,
+                description: "No estás roto, estás sobreestimulado. Aprende a insertar pequeñas pausas estratégicas en tu día para recargar tu cerebro y recuperar tu energía vital.",
+                badge: "Nuevo"
+            }
+        ];
+
+        let cart = [];
+        let currentFilter = 'all';
+
+        function renderBooks() {
+            const grid = document.getElementById('books-grid');
+            const filtered = currentFilter === 'all' ? books : books.filter(b => b.category === currentFilter);
+
+            grid.innerHTML = filtered.map(book => `
+                <div class="group bg-white rounded-3xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="bg-[#F5F5F7] relative overflow-hidden rounded-2xl" style="aspect-ratio:2/3;">
+                        ${book.image && book.image !== 'URL_IMAGEN'
+                    ? `<img src="${book.image}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;" onerror="this.style.display='none'">`
+                    : `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;"><div class='w-24 h-32 bg-[#EDEDED] rounded-xl flex items-center justify-center text-gray-400 text-xs'>Próximamente</div></div>`
+                }
+                    </div>
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2">${book.category === 'mindfulness' ? 'Mindfulness' : 'Bienestar Digital'}</div>
+                        <h3 class="font-display text-xl font-bold text-stone-900 mb-1 group-hover:text-emerald-700 transition">${book.title}</h3>
+                        <p class="text-sm text-stone-500 mb-3">${book.subtitle}</p>
+                        <p class="text-sm text-gray-500 mb-6 leading-relaxed text-justify">${book.description}</p>
+                        
+                        <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+                            <div>
+                                <span class="text-2xl font-bold text-stone-900">$${book.price}</span>
+                                <span class="text-sm text-stone-400 line-through ml-2">$${book.originalPrice}</span>
+                            </div>
+                            <button onclick='addToCart(${book.id})'
+                              class="px-5 py-2 bg-black text-white text-sm rounded-full hover:opacity-80 transition flex items-center gap-2">
+                               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
+                               Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            lucide.createIcons();
+        }
+
+        function filterBooks(category) {
+            currentFilter = category;
+            ['all', 'mindfulness', 'bienestar-digital'].forEach(cat => {
+                const btn = document.getElementById(`btn-${cat}`);
+                if (cat === category) {
+                    btn.classList.add('category-active');
+                    btn.classList.remove('bg-stone-100', 'text-stone-600');
+                } else {
+                    btn.classList.remove('category-active');
+                    btn.classList.add('bg-stone-100', 'text-stone-600');
+                }
+            });
+            renderBooks();
+        }
+
+        function addToCart(bookId) {
+            const book = books.find(b => b.id === bookId);
+            const existing = cart.find(item => item.id === bookId);
+            if (existing) existing.quantity++;
+            else cart.push({ ...book, quantity: 1 });
+            updateCart();
+            // Abrir el panel si está cerrado
+            const modal = document.getElementById('cart-modal');
+            if (modal.classList.contains('translate-x-full')) toggleCart();
+        }
+
+        function updateCart() {
+            const count = document.getElementById('cart-count');
+            const items = document.getElementById('cart-items');
+            const footer = document.getElementById('cart-footer');
+            const empty = document.getElementById('cart-empty');
+            const total = document.getElementById('cart-total');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            if (totalItems > 0) {
+                if (count) { count.classList.remove('hidden'); count.textContent = totalItems; }
+                if (footer) footer.classList.remove('hidden');
+                if (empty) empty.classList.add('hidden');
+                if (total) total.textContent = '$' + totalPrice.toFixed(2);
+
+                if (items) items.innerHTML = cart.map(item => `
+                    <div class="flex gap-4 items-center">
+                        <div class="w-14 h-18 bg-stone-100 rounded-lg flex items-center justify-center flex-shrink-0 p-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h2l3.4 7M7 13h10l4-8H5.4M7 13l-1.5 4h13M9 19a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-sm text-stone-900">${item.title}</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">$${item.price} &times; ${item.quantity}</p>
+                        </div>
+                        <button onclick='removeFromCart(${item.id})' class="text-red-400 hover:text-red-600 p-1">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+                        </button>
+                    </div>
+                `).join('');
+            } else {
+                if (count) { count.classList.add('hidden'); }
+                if (footer) footer.classList.add('hidden');
+                if (empty) empty.classList.remove('hidden');
+                if (items) items.innerHTML = '';
+            }
+            lucide.createIcons();
+        }
+
+        function removeFromCart(bookId) {
+            cart = cart.filter(item => item.id !== bookId);
+            updateCart();
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            const overlay = document.getElementById('cart-overlay');
+            const isOpen = !modal.classList.contains('translate-x-full');
+            if (isOpen) {
+                modal.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            } else {
+                modal.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function checkout() {
+            alert('Aquí se conectaría con Stripe/PayPal/MercadoPago');
+        }
+
+        renderBooks();
+        lucide.createIcons();
+    </script>
+    <script>
+        function openPreview(bookId) {
+            const previews = {
+                1: "LINK_CAPITULO_LIBRO_1",
+                2: "LINK_CAPITULO_LIBRO_2",
+                3: "LINK_CAPITULO_LIBRO_3",
+                4: "LINK_CAPITULO_LIBRO_4",
+                5: "LINK_CAPITULO_LIBRO_5",
+                6: "LINK_CAPITULO_LIBRO_6",
+                7: "LINK_CAPITULO_LIBRO_7",
+                8: "LINK_CAPITULO_LIBRO_8",
+                9: "LINK_CAPITULO_LIBRO_9"
+            };
+            window.open(previews[bookId], "_blank");
+        }
+    </script>
+    <!-- Archie Chat -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            // URL dinámica: se construye desde el dominio actual del navegador.
+            // Funciona igual en local (Docker) y en producción (Railway/VPS).
+            webhookUrl: window.location.origin + '/workflows/webhook/48defd59-e886-4ffb-8b81-f88957f79219/chat',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            mode: 'window',
+            // Claves que n8n buscará por defecto en el JSON de entrada
+            chatInputKey: 'chatInput',
+            chatSessionKey: 'sessionId',
+            showWelcomeScreen: true,
+            defaultLanguage: 'es',
+            // El mensaje inicial para romper el hielo
+            initialMessages: [
+                '¡Hola! Soy Archie, el Arquitecto de Historias. Estoy aquí para acompañarte en un proceso muy especial: conocerte para diseñar un libro de autoayuda completamente personalizado, creado exclusivamente para ti. ✨\n\nSerá una conversación breve y tranquila. Te haré algunas preguntas para entender tus desafíos, tus metas y esas fortalezas que te hacen único. Quiero que te sientas en un espacio seguro; toda la información que compartas es privada y se usará únicamente para la creación de tu libro. 🛡️\n\n¿Te gustaría que comencemos este viaje juntos?'
+            ],
+            // Traducción y personalización de la interfaz
+            i18n: {
+                es: {
+                    title: 'Archie',
+                    subtitle: 'Tu escritor personal · Asset Foundry',
+                    footer: '',
+                    getStarted: 'Nueva conversación',
+                    inputPlaceholder: 'Escribe aquí...',
+                },
+            },
+        });
+    </script>
+
+    <script>
+        function abrirFormResumen() {
+            const wrap = document.getElementById('resumen-form-wrap');
+            const trigger = document.getElementById('resumen-trigger');
+            wrap.style.maxHeight = '600px';
+            wrap.style.opacity = '1';
+            trigger.style.display = 'none';
+        }
+
+        function cerrarFormResumen() {
+            const wrap = document.getElementById('resumen-form-wrap');
+            const trigger = document.getElementById('resumen-trigger');
+            wrap.style.maxHeight = '0';
+            wrap.style.opacity = '0';
+            setTimeout(() => trigger.style.display = 'block', 400);
+        }
+
+        function enviarResumen() {
+            const email = document.getElementById('resumen-email').value.trim();
+            const libro = document.getElementById('resumen-libro').value;
+            const msg = document.getElementById('resumen-msg');
+            const btn = document.querySelector('button[onclick="enviarResumen()"]');
+
+            if (!email || !email.includes('@')) { mostrarMsg(msg, '⚠️ Ingresa un correo válido.', 'text-amber-600'); return; }
+            if (!libro) { mostrarMsg(msg, '⚠️ Selecciona el libro que te interesa.', 'text-amber-600'); return; }
+
+            // Mapa de libros a links de resumen en Drive
+            const resumenes = {
+                'El Arte de la Micro-Alegría': 'https://drive.google.com/file/d/1Bjq0eI5GBLhMHYy3utq0Cw-YEBs3OT5b/view?usp=sharing',
+                'Tu Oasis Digital': 'https://drive.google.com/file/d/1IyV1NsoeWfIZuJ4uUSi5z5zRSX4jyNYv/view?usp=sharing',
+                'El Refugio Digital': 'https://drive.google.com/file/d/1ab5iD_q8uJxQ2qiySl7APSuMKnYb4GJ8/view?usp=sharing',
+                'Conexión Real': 'https://drive.google.com/file/d/1BYLaIXitBK26kpsvZ2XGKDs60xCn6Aue/view?usp=sharing',
+                'Navegando el Futuro': 'https://drive.google.com/file/d/1g4rA8v_JURGh6Mi_dpNRVlT9KqpLfhaF/view?usp=sharing',
+                'Silencio Digital': 'https://drive.google.com/file/d/1W4ljBPitA_libmWOGqha_T4NcutiihjD/view?usp=sharing',
+                'El Filtro de la Calma': 'https://drive.google.com/file/d/18VwqY3aAnj3x8M-bkHFzP61hBwRgXX2J/view?usp=sharing',
+                'La Sabiduría del No': 'https://drive.google.com/file/d/1hCb80cW-oOS2icQVUjOG2Qqo9cWEckZR/view?usp=sharing',
+                'El Arte de la Micro-Pausa': 'https://drive.google.com/file/d/1oxicswtJciYE9PXEAZh_0ofBkB99T5Aj/view?usp=sharing',
+            };
+
+            const link = resumenes[libro] || '#';
+
+            // Deshabilitar botón mientras envía
+            if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
+            mostrarMsg(msg, '⏳ Enviando tu resumen...', 'text-gray-500');
+
+            emailjs.send('service_g7mqjmx', 'template_lef57a1', {
+                correo_usuario: email,
+                titulo_libro: libro,
+                link_resumen: link,
+            })
+                .then(function () {
+                    mostrarMsg(msg, '✅ ¡Listo! Revisa tu correo — te enviamos el resumen de "' + libro + '".', 'text-emerald-600');
+                    document.getElementById('resumen-email').value = '';
+                    document.getElementById('resumen-libro').value = '';
+                    setTimeout(() => cerrarFormResumen(), 3500);
+                })
+                .catch(function (error) {
+                    console.error('EmailJS error:', error);
+                    mostrarMsg(msg, '⚠️ Hubo un error al enviar. Intenta de nuevo.', 'text-amber-600');
+                })
+                .finally(function () {
+                    if (btn) { btn.disabled = false; btn.textContent = 'Enviarme el resumen gratis'; }
+                });
+        }
+
+        function mostrarMsg(el, texto, clase) {
+            el.textContent = texto;
+            el.className = 'text-center text-sm mt-4 ' + clase;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 5000);
+        }
+
+        function scrollToCatalogo(e) {
+            if (e) e.preventDefault();
+            document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function scrollToPreview(e) {
+            if (e) e.preventDefault();
+            document.getElementById('preview').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+    <script>
+        // Modificar el header del chat de n8n via DOM después de que carga
+        const chatObserver = new MutationObserver(function () {
+            const header = document.querySelector('.n8n-chat .chat-window-header');
+            if (header && !header.dataset.styled) {
+                header.dataset.styled = '1';
+
+                // Fondo gris oscuro suave
+                header.style.cssText = 'background:#2d2d2f!important;display:flex!important;flex-direction:row!important;align-items:center!important;gap:12px!important;padding:16px 20px!important;border-bottom:1px solid rgba(255,255,255,0.06)!important;';
+
+                // Crear avatar con robot SVG
+                const avatar = document.createElement('div');
+                avatar.style.cssText = 'width:38px;height:38px;border-radius:50%;background:#3a3a3c;display:flex;align-items:center;justify-content:center;flex-shrink:0;';
+                avatar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="26" height="26" fill="none"><rect x="20" y="6" width="24" height="20" rx="6" fill="#e5e7eb"/><circle cx="26" cy="14" r="3" fill="#2d2d2f"/><circle cx="38" cy="14" r="3" fill="#2d2d2f"/><rect x="30" y="24" width="4" height="5" rx="1" fill="#e5e7eb"/><rect x="10" y="30" width="44" height="26" rx="8" fill="#e5e7eb"/><rect x="18" y="38" width="8" height="8" rx="2" fill="#2d2d2f"/><rect x="38" y="38" width="8" height="8" rx="2" fill="#2d2d2f"/><rect x="26" y="42" width="12" height="3" rx="1.5" fill="#2d2d2f"/><rect x="4" y="34" width="6" height="14" rx="3" fill="#e5e7eb"/><rect x="54" y="34" width="6" height="14" rx="3" fill="#e5e7eb"/></svg>';
+
+                // Insertar avatar al inicio del header
+                header.insertBefore(avatar, header.firstChild);
+
+                // Estilizar título y subtítulo
+                const title = header.querySelector('.chat-window-title, [class*="title"]');
+                if (title) title.style.cssText = 'font-family:Playfair Display,Georgia,serif!important;font-size:14px!important;font-weight:700!important;color:#f3f4f6!important;';
+
+                const subtitle = header.querySelector('.chat-window-subtitle, [class*="subtitle"]');
+                if (subtitle) {
+                    subtitle.innerHTML = 'Tu escritor personal &nbsp;<span style="color:#34d399;font-weight:600;">· Asset Foundry</span>';
+                    subtitle.style.cssText = 'font-size:11px!important;color:rgba(255,255,255,0.5)!important;font-weight:400!important;display:flex!important;align-items:center!important;gap:4px!important;';
+                }
+            }
+        });
+        chatObserver.observe(document.body, { childList: true, subtree: true });
+    </script>
+    <!-- Chat Falso para Visitante -->
+    <div id="fake-chat-system" class="hidden">
+        <!-- Floating Button -->
+        <div id="fake-chat-toggle" onclick="openFakeChat()" class="chat-window-toggle"
+            style="position:fixed; right:16px; bottom:16px; width:64px; height:64px; border-radius:50%; background:#000; cursor:pointer; z-index:9998; box-shadow:0 4px 12px rgba(0,0,0,0.15); display:flex; justify-content:center; align-items:center;">
+            <!-- book-open svg -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="white" width="24" height="24">
+                <path
+                    d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 136 32 78.1 32 22.1 49.3 2 61.2c-1.1 .7-2 2-2 3.4v402c0 10.1 9 17.5 19 15.6C73 470.4 117.7 464 152 464c51.9 0 81.3 7 97.6 7.5zM326.4 471.5c16.3-.5 45.7-7.5 97.6-7.5 34.3 0 79 6.4 133 18.2 10 2 19-5.5 19-15.6v-402c0-1.4-.9-2.7-2-3.4C553.9 49.3 497.9 32 440 32c-66.4 0-111.4 20-131 35.6-3.4 2.6-5 6.8-5 11V456c0 11.4 11.6 19.3 22.4 15.5z" />
+            </svg>
+        </div>
+
+        <!-- Fake Window -->
+        <div id="fake-chat-window"
+            style="display:none; position:fixed; right:16px; bottom:16px; width:380px; height:580px; z-index:9999; border-radius:20px; box-shadow:0 24px 64px rgba(0,0,0,0.18); border:1px solid rgba(0,0,0,0.06); background:#fff; flex-direction:column; overflow:hidden;">
+            <div
+                style="background:#2d2d2f; padding:16px 20px; display:flex; align-items:center; gap:12px; border-bottom:1px solid rgba(255,255,255,0.06);">
+                <div
+                    style="width:38px;height:38px;border-radius:50%;background:#3a3a3c;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="26" height="26" fill="none">
+                        <rect x="20" y="6" width="24" height="20" rx="6" fill="#e5e7eb" />
+                        <circle cx="26" cy="14" r="3" fill="#2d2d2f" />
+                        <circle cx="38" cy="14" r="3" fill="#2d2d2f" />
+                        <rect x="30" y="24" width="4" height="5" rx="1" fill="#e5e7eb" />
+                        <rect x="10" y="30" width="44" height="26" rx="8" fill="#e5e7eb" />
+                        <rect x="18" y="38" width="8" height="8" rx="2" fill="#2d2d2f" />
+                        <rect x="38" y="38" width="8" height="8" rx="2" fill="#2d2d2f" />
+                        <rect x="26" y="42" width="12" height="3" rx="1.5" fill="#2d2d2f" />
+                        <rect x="4" y="34" width="6" height="14" rx="3" fill="#e5e7eb" />
+                        <rect x="54" y="34" width="6" height="14" rx="3" fill="#e5e7eb" />
+                    </svg>
+                </div>
+                <div>
+                    <div
+                        style="font-family:'Playfair Display',Georgia,serif; font-size:14px; font-weight:700; color:#f3f4f6; letter-spacing:-0.01em;">
+                        Archie</div>
+                    <div
+                        style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:400; display:flex; align-items:center; gap:4px;">
+                        Tu escritor personal <span style="color:#34d399;font-weight:600;">· Asset Foundry</span></div>
+                </div>
+                <button onclick="closeFakeChat()"
+                    style="margin-left:auto; background:none; border:none; color:rgba(255,255,255,0.5); cursor:pointer;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div style="flex:1; background:#F5F5F7; padding:24px; display:flex; flex-direction:column;">
+                <!-- BotMessage simulado -->
+                <div
+                    style="background:#fff; border-radius:14px; border-bottom-left-radius:0; padding:16px; box-shadow:0 2px 4px rgba(0,0,0,0.02); max-width:85%;">
+                    <p style="color:#1D1D1F; font-size:14px; line-height:1.5; margin:0;">Lo sentimos, solo los usuarios
+                        registrados tienen acceso a nuestro chatbot.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateRole() {
+            const role = document.getElementById('role-selector').value;
+            document.body.setAttribute('data-role', role);
+        }
+
+        function openFakeChat() {
+            document.getElementById('fake-chat-window').style.display = 'flex';
+            document.getElementById('fake-chat-toggle').style.display = 'none';
+        }
+
+        function closeFakeChat() {
+            document.getElementById('fake-chat-window').style.display = 'none';
+            document.getElementById('fake-chat-toggle').style.display = 'flex';
+        }
+
+        // Add listener to close fast fake chat if user clicks outside of window
+        document.addEventListener('click', function (event) {
+            const windowEl = document.getElementById('fake-chat-window');
+            const toggleEl = document.getElementById('fake-chat-toggle');
+            if (windowEl.style.display === 'flex') {
+                if (!windowEl.contains(event.target) && !toggleEl.contains(event.target)) {
+                    closeFakeChat();
+                }
+            }
+        });
+
+        // Asegurar que el rol cargue correctamente si hay recarga de página
+        document.addEventListener('DOMContentLoaded', updateRole);
+    </script>
+</body>
+
+</html>

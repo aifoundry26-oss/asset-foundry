@@ -1,0 +1,401 @@
+ID_Libro,Fecha_Creacion,Titulo,Paginas,Tema_Principal,Tags,Nivel_Tendencia_Mercado,Herramientas_AFAP,Precio_Venta
+AF-001,2025-11-25 16:47:09,Guía de Productividad Vol. 95,58,Productividad,"mañana, disciplina, hábitos",9.0,5,12.77
+CB-002,2025-07-14 13:47:09,Guía de Ansiedad Vol. 30,50,Ansiedad,"mindfulness, calma, respiración, estrés, salud",8.8,3,14.42
+AF-003,2025-05-16 14:47:09,Guía de Liderazgo Vol. 20,56,Liderazgo,"oficina, estrategia, management, comunicación",8.1,4,12.46
+AF-004,2025-09-18 17:47:09,Guía de Productividad Vol. 49,52,Productividad,"enfoque, metas, disciplina, tiempo, hábitos",9.1,3,11.77
+AF-005,2026-03-20 17:47:09,Guía de Productividad Vol. 49,58,Productividad,"disciplina, enfoque, mañana, tiempo",8.1,5,12.68
+AF-006,2025-08-14 12:47:09,Guía de Ansiedad Vol. 69,57,Ansiedad,"respiración, salud, paz mental",10.0,5,14.28
+AF-007,2025-10-01 21:47:09,Guía de Productividad Vol. 30,51,Productividad,"tiempo, enfoque, hábitos, disciplina",9.7,5,13.3
+AF-008,2026-02-17 04:47:09,Guía de Crecimiento Personal Vol. 83,64,Crecimiento Personal,"psicología, motivación, autoestima",9.2,5,14.43
+AF-009,2025-07-14 12:47:09,Guía de Crecimiento Personal Vol. 47,57,Crecimiento Personal,"resiliencia, cambio, autoestima",9.3,3,11.86
+AF-010,2026-01-22 23:47:09,Guía de Productividad Vol. 50,62,Productividad,"tiempo, metas, enfoque, disciplina, hábitos",9.0,3,13.76
+AF-011,2025-07-24 07:47:09,Guía de Liderazgo Vol. 15,59,Liderazgo,"equipos, management, oficina, empatía",9.6,4,14.54
+AF-012,2025-10-26 00:47:09,Guía de Liderazgo Vol. 82,56,Liderazgo,"empatía, equipos, oficina",8.8,4,11.64
+CB-013,2025-06-28 12:47:09,Guía de Ansiedad Vol. 73,52,Ansiedad,"salud, respiración, estrés",9.9,5,16.38
+AF-014,2025-12-04 07:47:09,Guía de Finanzas Personales Vol. 22,58,Finanzas Personales,"libertad financiera, presupuesto, ahorro, dinero, inversión",8.2,5,13.5
+AF-015,2025-05-23 22:47:09,Guía de Ansiedad Vol. 29,52,Ansiedad,"estrés, calma, mindfulness, paz mental",7.7,3,11.17
+CB-016,2025-08-26 06:47:09,Guía de Productividad Vol. 43,52,Productividad,"mañana, enfoque, tiempo, hábitos, metas",9.2,5,15.65
+AF-017,2026-03-19 18:47:09,Guía de Ansiedad Vol. 13,53,Ansiedad,"respiración, paz mental, salud, mindfulness, calma",9.6,3,12.25
+CB-018,2025-08-28 17:47:09,Guía de Liderazgo Vol. 14,57,Liderazgo,"equipos, comunicación, management",7.4,3,14.16
+AF-019,2025-11-14 16:47:09,Guía de Finanzas Personales Vol. 13,51,Finanzas Personales,"libertad financiera, ahorro, presupuesto, dinero, inversión",8.2,4,10.73
+CB-020,2026-02-14 14:47:09,Guía de Productividad Vol. 50,58,Productividad,"enfoque, tiempo, metas, hábitos",7.6,3,15.84
+AF-021,2025-08-22 03:47:09,Guía de Liderazgo Vol. 8,51,Liderazgo,"management, comunicación, equipos, oficina, empatía",9.6,3,11.69
+CB-022,2025-09-06 03:47:09,Guía de Finanzas Personales Vol. 32,51,Finanzas Personales,"ahorro, presupuesto, dinero, inversión, libertad financiera",7.6,5,14.13
+CB-023,2025-06-30 02:47:09,Guía de Liderazgo Vol. 59,60,Liderazgo,"oficina, management, estrategia",7.2,3,15.11
+AF-024,2026-02-01 00:47:09,Guía de Ansiedad Vol. 48,59,Ansiedad,"respiración, calma, paz mental",8.8,5,13.76
+AF-025,2025-10-15 21:47:09,Guía de Productividad Vol. 18,58,Productividad,"hábitos, metas, mañana",7.8,5,12.42
+AF-026,2026-03-15 23:47:09,Guía de Liderazgo Vol. 65,65,Liderazgo,"oficina, estrategia, management, equipos",7.1,4,14.09
+CB-027,2025-11-29 19:47:09,Guía de Crecimiento Personal Vol. 71,63,Crecimiento Personal,"autoestima, resiliencia, cambio, psicología, motivación",9.5,5,17.96
+CB-028,2025-11-18 10:47:09,Guía de Liderazgo Vol. 6,61,Liderazgo,"estrategia, equipos, oficina",8.1,5,17.52
+AF-029,2025-09-06 20:47:09,Guía de Ansiedad Vol. 21,55,Ansiedad,"estrés, mindfulness, paz mental, calma",9.4,5,13.82
+AF-030,2025-07-31 03:47:09,Guía de Productividad Vol. 49,51,Productividad,"mañana, disciplina, tiempo, metas",7.9,3,10.1
+AF-031,2025-05-07 18:47:09,Guía de Productividad Vol. 99,58,Productividad,"disciplina, metas, tiempo, enfoque",9.9,5,13.71
+AF-032,2026-01-09 18:47:09,Guía de Liderazgo Vol. 23,58,Liderazgo,"oficina, comunicación, management",8.0,4,12.47
+AF-033,2025-08-02 02:47:09,Guía de Finanzas Personales Vol. 25,58,Finanzas Personales,"presupuesto, ahorro, dinero",9.8,5,14.37
+AF-034,2025-06-27 21:47:09,Guía de Liderazgo Vol. 80,60,Liderazgo,"oficina, empatía, comunicación, management, equipos",8.0,5,13.09
+AF-035,2026-02-28 11:47:09,Guía de Crecimiento Personal Vol. 87,55,Crecimiento Personal,"resiliencia, psicología, motivación, autoestima, cambio",7.9,4,12.52
+AF-036,2025-06-09 22:47:09,Guía de Crecimiento Personal Vol. 57,56,Crecimiento Personal,"cambio, motivación, psicología, autoestima, resiliencia",8.5,5,13.19
+AF-037,2026-03-12 09:47:09,Guía de Ansiedad Vol. 26,54,Ansiedad,"estrés, mindfulness, respiración",8.8,3,11.61
+CB-038,2026-01-14 05:47:09,Guía de Crecimiento Personal Vol. 64,62,Crecimiento Personal,"motivación, autoestima, cambio",9.3,3,15.9
+CB-039,2026-01-07 04:47:09,Guía de Ansiedad Vol. 16,64,Ansiedad,"respiración, calma, paz mental",9.9,4,17.98
+AF-040,2025-08-23 23:47:09,Guía de Finanzas Personales Vol. 58,55,Finanzas Personales,"presupuesto, libertad financiera, inversión, ahorro, dinero",9.3,5,13.12
+AF-041,2025-08-10 17:47:09,Guía de Liderazgo Vol. 31,58,Liderazgo,"empatía, comunicación, oficina, management",7.5,4,12.74
+AF-042,2025-05-04 09:47:09,Guía de Liderazgo Vol. 70,64,Liderazgo,"oficina, equipos, management, comunicación",9.7,5,16.04
+AF-043,2025-11-09 01:47:09,Guía de Productividad Vol. 46,59,Productividad,"tiempo, metas, mañana, disciplina",7.7,4,12.62
+AF-044,2025-12-15 20:47:09,Guía de Crecimiento Personal Vol. 93,55,Crecimiento Personal,"motivación, autoestima, resiliencia, cambio",7.3,4,10.92
+CB-045,2025-06-04 06:47:09,Guía de Crecimiento Personal Vol. 42,56,Crecimiento Personal,"psicología, resiliencia, motivación, cambio",9.3,4,15.35
+CB-046,2026-03-07 19:47:09,Guía de Finanzas Personales Vol. 7,61,Finanzas Personales,"ahorro, libertad financiera, presupuesto",9.8,3,17.28
+CB-047,2025-06-20 20:47:09,Guía de Crecimiento Personal Vol. 86,53,Crecimiento Personal,"motivación, cambio, psicología, resiliencia, autoestima",7.5,5,15.78
+AF-048,2026-03-10 22:47:09,Guía de Productividad Vol. 75,50,Productividad,"metas, tiempo, disciplina, enfoque",7.6,5,11.68
+CB-049,2025-11-25 06:47:09,Guía de Liderazgo Vol. 88,53,Liderazgo,"oficina, empatía, management, comunicación, equipos",7.2,5,14.38
+CB-050,2025-12-18 04:47:09,Guía de Liderazgo Vol. 82,64,Liderazgo,"equipos, management, estrategia, empatía, comunicación",8.8,5,18.25
+AF-051,2025-11-04 01:47:09,Guía de Finanzas Personales Vol. 35,60,Finanzas Personales,"ahorro, dinero, inversión",7.7,4,12.99
+CB-052,2025-09-12 08:47:09,Guía de Liderazgo Vol. 24,65,Liderazgo,"empatía, estrategia, comunicación",7.8,5,17.8
+CB-053,2025-05-01 17:47:09,Guía de Ansiedad Vol. 11,57,Ansiedad,"respiración, salud, mindfulness, paz mental, calma",8.9,4,15.75
+AF-054,2025-10-21 13:47:09,Guía de Crecimiento Personal Vol. 89,57,Crecimiento Personal,"resiliencia, psicología, motivación, cambio",8.3,5,13.15
+AF-055,2025-07-26 21:47:09,Guía de Liderazgo Vol. 33,57,Liderazgo,"estrategia, equipos, empatía",7.4,5,13.5
+CB-056,2026-01-21 19:47:09,Guía de Crecimiento Personal Vol. 36,59,Crecimiento Personal,"motivación, psicología, autoestima",8.1,4,14.88
+AF-057,2025-05-19 23:47:09,Guía de Productividad Vol. 71,59,Productividad,"mañana, tiempo, hábitos, metas, disciplina",8.4,4,12.68
+AF-058,2025-06-05 22:47:09,Guía de Crecimiento Personal Vol. 15,52,Crecimiento Personal,"cambio, autoestima, psicología, resiliencia",7.5,5,12.55
+CB-059,2025-06-12 21:47:09,Guía de Crecimiento Personal Vol. 78,57,Crecimiento Personal,"cambio, resiliencia, motivación, psicología, autoestima",7.9,5,14.97
+AF-060,2026-02-22 06:47:09,Guía de Liderazgo Vol. 85,52,Liderazgo,"equipos, estrategia, oficina",7.5,4,11.05
+AF-061,2025-07-08 23:47:09,Guía de Ansiedad Vol. 37,59,Ansiedad,"respiración, estrés, mindfulness, salud, calma",8.3,5,12.9
+AF-062,2025-11-15 23:47:09,Guía de Productividad Vol. 8,55,Productividad,"metas, disciplina, enfoque, mañana",7.4,5,11.81
+AF-063,2026-02-12 09:47:09,Guía de Crecimiento Personal Vol. 57,52,Crecimiento Personal,"autoestima, cambio, psicología, motivación, resiliencia",7.1,3,11.37
+AF-064,2025-12-03 11:47:09,Guía de Liderazgo Vol. 74,51,Liderazgo,"management, comunicación, estrategia",9.7,3,12.54
+AF-065,2025-11-15 08:47:09,Guía de Productividad Vol. 61,61,Productividad,"enfoque, disciplina, hábitos, tiempo",8.0,5,13.69
+CB-066,2025-07-29 07:47:09,Guía de Productividad Vol. 41,58,Productividad,"hábitos, tiempo, disciplina, enfoque",9.6,4,16.23
+AF-067,2025-12-27 18:47:09,Guía de Crecimiento Personal Vol. 81,64,Crecimiento Personal,"motivación, psicología, cambio",7.4,4,13.38
+CB-068,2025-06-23 11:47:09,Guía de Finanzas Personales Vol. 31,55,Finanzas Personales,"libertad financiera, ahorro, dinero, inversión",7.3,3,14.07
+AF-069,2026-02-24 07:47:09,Guía de Crecimiento Personal Vol. 92,59,Crecimiento Personal,"psicología, cambio, motivación, resiliencia, autoestima",8.4,3,12.27
+AF-070,2026-02-14 12:47:09,Guía de Ansiedad Vol. 9,58,Ansiedad,"paz mental, calma, salud, estrés",7.8,4,13.17
+AF-071,2025-08-24 09:47:09,Guía de Ansiedad Vol. 58,65,Ansiedad,"paz mental, calma, respiración, mindfulness",9.8,3,15.36
+AF-072,2026-02-20 01:47:09,Guía de Crecimiento Personal Vol. 6,60,Crecimiento Personal,"cambio, resiliencia, motivación, autoestima, psicología",9.9,3,13.45
+AF-073,2025-09-06 01:47:09,Guía de Crecimiento Personal Vol. 13,64,Crecimiento Personal,"motivación, cambio, psicología",9.9,3,14.19
+AF-074,2025-08-22 11:47:09,Guía de Crecimiento Personal Vol. 84,52,Crecimiento Personal,"resiliencia, cambio, motivación, psicología",9.6,3,11.93
+AF-075,2025-05-22 00:47:09,Guía de Liderazgo Vol. 30,52,Liderazgo,"oficina, estrategia, management, comunicación",9.1,3,10.54
+AF-076,2025-08-25 06:47:09,Guía de Crecimiento Personal Vol. 19,57,Crecimiento Personal,"cambio, motivación, autoestima, psicología, resiliencia",8.8,4,13.04
+AF-077,2026-01-27 20:47:09,Guía de Ansiedad Vol. 30,64,Ansiedad,"paz mental, respiración, salud, calma, estrés",9.7,4,15.45
+CB-078,2025-11-05 09:47:09,Guía de Liderazgo Vol. 76,59,Liderazgo,"management, empatía, estrategia, equipos, oficina",10.0,4,16.01
+AF-079,2025-05-19 10:47:09,Guía de Liderazgo Vol. 90,59,Liderazgo,"estrategia, management, empatía",7.0,5,13.36
+AF-080,2025-07-03 11:47:09,Guía de Liderazgo Vol. 100,57,Liderazgo,"empatía, equipos, comunicación, estrategia, management",9.0,5,13.93
+CB-081,2025-11-21 20:47:09,Guía de Productividad Vol. 40,64,Productividad,"metas, enfoque, mañana",7.3,4,16.1
+CB-082,2025-12-18 17:47:09,Guía de Finanzas Personales Vol. 47,58,Finanzas Personales,"dinero, presupuesto, inversión",9.2,4,16.81
+CB-083,2025-09-05 09:47:09,Guía de Ansiedad Vol. 87,62,Ansiedad,"paz mental, estrés, respiración, calma, mindfulness",8.6,4,16.44
+AF-084,2025-12-17 13:47:09,Guía de Liderazgo Vol. 14,57,Liderazgo,"oficina, comunicación, empatía, management",7.7,3,12.02
+AF-085,2025-07-02 03:47:09,Guía de Crecimiento Personal Vol. 15,54,Crecimiento Personal,"autoestima, psicología, motivación",7.3,3,11.72
+AF-086,2025-10-29 21:47:09,Guía de Finanzas Personales Vol. 54,54,Finanzas Personales,"ahorro, presupuesto, dinero, inversión",9.8,4,11.77
+AF-087,2025-12-11 17:47:09,Guía de Ansiedad Vol. 47,53,Ansiedad,"paz mental, calma, salud, estrés, mindfulness",7.8,3,11.9
+AF-088,2025-08-11 22:47:09,Guía de Finanzas Personales Vol. 3,51,Finanzas Personales,"inversión, libertad financiera, dinero, ahorro",7.2,5,10.71
+AF-089,2025-10-23 22:47:09,Guía de Ansiedad Vol. 77,50,Ansiedad,"mindfulness, salud, paz mental, estrés",7.3,3,9.41
+AF-090,2025-10-26 07:47:09,Guía de Productividad Vol. 23,58,Productividad,"mañana, tiempo, hábitos",9.2,4,13.1
+AF-091,2025-06-18 06:47:09,Guía de Crecimiento Personal Vol. 65,57,Crecimiento Personal,"autoestima, psicología, motivación, resiliencia, cambio",10.0,4,13.25
+AF-092,2025-10-07 03:47:09,Guía de Crecimiento Personal Vol. 10,52,Crecimiento Personal,"resiliencia, motivación, autoestima, psicología",7.8,5,11.97
+AF-093,2025-12-12 03:47:09,Guía de Finanzas Personales Vol. 38,64,Finanzas Personales,"libertad financiera, presupuesto, ahorro, dinero, inversión",8.3,3,13.28
+AF-094,2025-06-05 17:47:09,Guía de Productividad Vol. 41,63,Productividad,"disciplina, enfoque, metas, hábitos",9.1,4,13.28
+AF-095,2025-11-26 14:47:09,Guía de Liderazgo Vol. 17,51,Liderazgo,"comunicación, estrategia, empatía, management, oficina",8.2,5,12.68
+CB-096,2025-10-20 08:47:09,Guía de Liderazgo Vol. 77,59,Liderazgo,"oficina, comunicación, equipos, estrategia",9.0,3,16.49
+AF-097,2025-07-24 23:47:09,Guía de Liderazgo Vol. 74,57,Liderazgo,"comunicación, estrategia, oficina, empatía",9.8,5,13.33
+AF-098,2025-05-08 17:47:09,Guía de Liderazgo Vol. 44,61,Liderazgo,"equipos, estrategia, management",7.2,5,13.57
+AF-099,2025-05-19 19:47:09,Guía de Ansiedad Vol. 49,63,Ansiedad,"paz mental, mindfulness, salud, calma",9.2,5,14.89
+CB-100,2025-06-21 02:47:09,Guía de Finanzas Personales Vol. 7,52,Finanzas Personales,"presupuesto, libertad financiera, inversión, dinero",8.2,3,14.51
+AF-101,2025-09-24 21:47:09,Guía de Liderazgo Vol. 87,65,Liderazgo,"estrategia, empatía, oficina, management, equipos",10.0,3,13.52
+AF-102,2025-08-19 07:47:09,Guía de Liderazgo Vol. 38,60,Liderazgo,"oficina, management, comunicación",7.5,4,12.82
+AF-103,2025-11-17 13:47:09,Guía de Liderazgo Vol. 10,62,Liderazgo,"oficina, management, estrategia, equipos, comunicación",9.6,5,14.56
+AF-104,2025-06-16 22:47:09,Guía de Liderazgo Vol. 15,62,Liderazgo,"empatía, equipos, management",9.5,4,13.33
+AF-105,2025-06-21 07:47:09,Guía de Crecimiento Personal Vol. 68,52,Crecimiento Personal,"psicología, resiliencia, autoestima, motivación",9.3,3,11.57
+AF-106,2026-03-24 17:47:09,Guía de Liderazgo Vol. 45,54,Liderazgo,"oficina, equipos, empatía",7.6,5,11.41
+CB-107,2025-09-25 23:47:09,Guía de Crecimiento Personal Vol. 60,64,Crecimiento Personal,"resiliencia, psicología, cambio, motivación, autoestima",8.3,4,16.83
+AF-108,2025-06-09 10:47:09,Guía de Liderazgo Vol. 65,52,Liderazgo,"management, estrategia, oficina, comunicación",8.1,4,10.6
+AF-109,2025-10-16 13:47:09,Guía de Crecimiento Personal Vol. 60,51,Crecimiento Personal,"resiliencia, motivación, cambio, psicología",8.5,3,10.85
+CB-110,2025-10-14 12:47:09,Guía de Ansiedad Vol. 6,57,Ansiedad,"respiración, salud, mindfulness, calma, paz mental",9.8,4,16.12
+AF-111,2026-02-25 19:47:09,Guía de Liderazgo Vol. 9,60,Liderazgo,"comunicación, management, empatía",7.8,5,14.33
+AF-112,2025-10-08 19:47:09,Guía de Finanzas Personales Vol. 85,54,Finanzas Personales,"dinero, presupuesto, ahorro, libertad financiera",7.9,4,12.04
+AF-113,2025-12-27 21:47:09,Guía de Finanzas Personales Vol. 12,63,Finanzas Personales,"dinero, ahorro, inversión, libertad financiera, presupuesto",9.9,4,15.45
+CB-114,2025-11-01 19:47:09,Guía de Ansiedad Vol. 20,52,Ansiedad,"estrés, calma, salud, paz mental",8.0,5,14.16
+CB-115,2025-12-08 22:47:09,Guía de Finanzas Personales Vol. 22,64,Finanzas Personales,"presupuesto, dinero, libertad financiera",9.2,4,17.62
+AF-116,2025-11-23 20:47:09,Guía de Liderazgo Vol. 61,56,Liderazgo,"estrategia, comunicación, management, equipos",9.3,4,12.86
+AF-117,2025-06-26 00:47:09,Guía de Finanzas Personales Vol. 18,58,Finanzas Personales,"presupuesto, dinero, libertad financiera",9.8,5,14.69
+CB-118,2025-11-12 07:47:09,Guía de Ansiedad Vol. 35,64,Ansiedad,"mindfulness, respiración, estrés, calma, salud",9.7,3,16.98
+AF-119,2025-07-06 19:47:09,Guía de Crecimiento Personal Vol. 11,61,Crecimiento Personal,"autoestima, psicología, resiliencia",9.5,5,14.12
+CB-120,2026-01-29 14:47:09,Guía de Crecimiento Personal Vol. 90,54,Crecimiento Personal,"cambio, resiliencia, psicología, autoestima, motivación",7.1,3,14.52
+AF-121,2025-12-13 17:47:09,Guía de Crecimiento Personal Vol. 15,59,Crecimiento Personal,"psicología, autoestima, cambio",7.7,5,13.74
+CB-122,2026-02-10 04:47:09,Guía de Crecimiento Personal Vol. 77,50,Crecimiento Personal,"resiliencia, motivación, psicología, autoestima, cambio",8.3,5,14.36
+CB-123,2025-11-08 02:47:09,Guía de Productividad Vol. 68,61,Productividad,"metas, disciplina, hábitos",8.2,4,15.39
+AF-124,2026-03-18 20:47:09,Guía de Productividad Vol. 46,52,Productividad,"mañana, hábitos, enfoque, metas",7.1,5,11.13
+AF-125,2025-05-15 01:47:09,Guía de Crecimiento Personal Vol. 90,65,Crecimiento Personal,"motivación, resiliencia, autoestima, cambio, psicología",7.9,3,14.03
+AF-126,2025-10-09 23:47:09,Guía de Finanzas Personales Vol. 51,65,Finanzas Personales,"ahorro, inversión, presupuesto, dinero",9.6,3,15.03
+CB-127,2026-01-13 23:47:09,Guía de Liderazgo Vol. 56,62,Liderazgo,"management, estrategia, empatía, oficina, equipos",9.1,4,17.8
+AF-128,2026-02-26 13:47:09,Guía de Crecimiento Personal Vol. 11,63,Crecimiento Personal,"motivación, psicología, resiliencia, autoestima, cambio",8.0,4,13.21
+AF-129,2026-03-16 03:47:09,Guía de Crecimiento Personal Vol. 45,64,Crecimiento Personal,"psicología, cambio, motivación",8.9,3,12.9
+AF-130,2025-11-06 09:47:09,Guía de Ansiedad Vol. 4,54,Ansiedad,"salud, respiración, estrés, calma, paz mental",7.7,5,11.88
+CB-131,2026-03-21 23:47:09,Guía de Ansiedad Vol. 87,64,Ansiedad,"paz mental, respiración, estrés, salud",7.4,4,16.3
+CB-132,2026-03-03 00:47:09,Guía de Productividad Vol. 4,55,Productividad,"metas, tiempo, hábitos, mañana",9.3,5,16.04
+AF-133,2025-10-04 12:47:09,Guía de Crecimiento Personal Vol. 26,53,Crecimiento Personal,"autoestima, cambio, resiliencia",9.7,4,13.44
+AF-134,2025-08-23 06:47:09,Guía de Productividad Vol. 71,59,Productividad,"mañana, disciplina, enfoque, tiempo",7.7,3,12.73
+CB-135,2025-12-25 07:47:09,Guía de Finanzas Personales Vol. 74,61,Finanzas Personales,"libertad financiera, inversión, dinero, ahorro",7.2,4,16.8
+AF-136,2026-01-31 11:47:09,Guía de Crecimiento Personal Vol. 74,52,Crecimiento Personal,"psicología, autoestima, motivación",8.4,5,11.79
+AF-137,2025-08-17 02:47:09,Guía de Ansiedad Vol. 56,51,Ansiedad,"calma, mindfulness, paz mental",7.5,4,11.82
+AF-138,2025-07-19 09:47:09,Guía de Finanzas Personales Vol. 37,52,Finanzas Personales,"inversión, dinero, ahorro, libertad financiera",8.8,3,11.31
+AF-139,2026-03-16 15:47:09,Guía de Ansiedad Vol. 22,60,Ansiedad,"estrés, salud, calma, respiración, mindfulness",9.0,5,13.83
+AF-140,2025-11-22 06:47:09,Guía de Finanzas Personales Vol. 38,59,Finanzas Personales,"inversión, presupuesto, libertad financiera, dinero",7.2,3,11.22
+AF-141,2025-06-17 01:47:09,Guía de Liderazgo Vol. 78,54,Liderazgo,"estrategia, empatía, comunicación, equipos",7.4,4,11.53
+CB-142,2025-11-23 22:47:09,Guía de Productividad Vol. 35,64,Productividad,"mañana, hábitos, metas",7.9,4,17.48
+AF-143,2025-06-09 03:47:09,Guía de Ansiedad Vol. 42,60,Ansiedad,"mindfulness, respiración, calma",8.5,4,13.24
+AF-144,2025-09-17 08:47:09,Guía de Ansiedad Vol. 28,61,Ansiedad,"estrés, paz mental, respiración",8.8,5,14.45
+CB-145,2025-08-01 02:47:09,Guía de Productividad Vol. 56,54,Productividad,"disciplina, enfoque, tiempo, mañana",7.1,3,13.99
+AF-146,2025-10-27 19:47:09,Guía de Productividad Vol. 50,64,Productividad,"enfoque, metas, hábitos, tiempo, disciplina",8.2,4,14.02
+CB-147,2025-07-09 10:47:09,Guía de Finanzas Personales Vol. 52,51,Finanzas Personales,"ahorro, inversión, dinero",8.0,4,14.24
+AF-148,2026-01-21 06:47:09,Guía de Ansiedad Vol. 42,60,Ansiedad,"respiración, calma, paz mental",8.8,5,14.56
+AF-149,2026-03-11 15:47:09,Guía de Liderazgo Vol. 61,50,Liderazgo,"empatía, oficina, management, estrategia",7.9,5,12.19
+AF-150,2026-02-11 13:47:09,Guía de Liderazgo Vol. 84,57,Liderazgo,"oficina, comunicación, management, estrategia, equipos",7.4,5,12.08
+CB-151,2025-05-25 13:47:09,Guía de Productividad Vol. 57,60,Productividad,"mañana, tiempo, disciplina, metas",8.5,5,17.59
+CB-152,2025-10-22 12:47:09,Guía de Ansiedad Vol. 72,60,Ansiedad,"respiración, calma, salud, mindfulness, estrés",8.4,5,16.38
+AF-153,2025-08-08 13:47:09,Guía de Liderazgo Vol. 79,65,Liderazgo,"equipos, empatía, comunicación",7.7,4,14.39
+AF-154,2025-07-07 00:47:09,Guía de Liderazgo Vol. 62,61,Liderazgo,"estrategia, empatía, comunicación, oficina, equipos",9.7,4,14.69
+CB-155,2025-06-18 10:47:09,Guía de Productividad Vol. 45,64,Productividad,"enfoque, tiempo, mañana, hábitos, metas",9.8,5,17.74
+AF-156,2025-07-02 15:47:09,Guía de Ansiedad Vol. 32,51,Ansiedad,"calma, mindfulness, salud, estrés, paz mental",8.2,5,11.74
+AF-157,2025-06-08 11:47:09,Guía de Ansiedad Vol. 53,65,Ansiedad,"salud, mindfulness, paz mental, calma",7.9,3,14.27
+AF-158,2025-07-28 14:47:09,Guía de Finanzas Personales Vol. 95,51,Finanzas Personales,"presupuesto, inversión, ahorro",10.0,4,12.78
+AF-159,2025-12-31 19:47:09,Guía de Liderazgo Vol. 5,50,Liderazgo,"comunicación, estrategia, oficina, equipos",7.9,5,11.54
+AF-160,2025-05-01 14:47:09,Guía de Crecimiento Personal Vol. 35,56,Crecimiento Personal,"psicología, motivación, resiliencia",8.4,4,12.84
+AF-161,2025-06-10 20:47:09,Guía de Liderazgo Vol. 73,56,Liderazgo,"comunicación, management, estrategia",8.5,3,11.75
+AF-162,2025-09-25 09:47:09,Guía de Crecimiento Personal Vol. 42,57,Crecimiento Personal,"psicología, cambio, autoestima",8.3,4,13.46
+AF-163,2025-09-30 13:47:09,Guía de Productividad Vol. 34,61,Productividad,"mañana, hábitos, metas, disciplina, enfoque",7.5,5,13.46
+CB-164,2026-01-30 06:47:09,Guía de Liderazgo Vol. 48,57,Liderazgo,"equipos, management, estrategia",8.4,5,15.85
+AF-165,2026-01-29 07:47:09,Guía de Ansiedad Vol. 98,57,Ansiedad,"calma, estrés, respiración, paz mental, mindfulness",7.2,5,11.72
+CB-166,2026-01-10 05:47:09,Guía de Finanzas Personales Vol. 20,55,Finanzas Personales,"libertad financiera, presupuesto, ahorro, dinero",9.2,4,14.78
+AF-167,2025-11-11 23:47:09,Guía de Crecimiento Personal Vol. 17,63,Crecimiento Personal,"resiliencia, autoestima, psicología, motivación",9.0,4,14.55
+AF-168,2025-05-29 06:47:09,Guía de Ansiedad Vol. 75,52,Ansiedad,"respiración, paz mental, estrés",8.6,3,12.07
+CB-169,2026-01-24 19:47:09,Guía de Crecimiento Personal Vol. 24,54,Crecimiento Personal,"cambio, psicología, motivación, resiliencia, autoestima",8.1,5,16.28
+AF-170,2025-12-17 12:47:09,Guía de Liderazgo Vol. 16,55,Liderazgo,"management, comunicación, equipos, empatía, oficina",9.5,3,13.21
+AF-171,2025-06-19 16:47:09,Guía de Crecimiento Personal Vol. 69,62,Crecimiento Personal,"motivación, cambio, resiliencia",7.5,3,13.52
+AF-172,2025-05-17 22:47:09,Guía de Crecimiento Personal Vol. 79,50,Crecimiento Personal,"motivación, autoestima, cambio",8.8,4,11.6
+AF-173,2026-02-13 10:47:09,Guía de Crecimiento Personal Vol. 57,57,Crecimiento Personal,"motivación, autoestima, cambio, resiliencia, psicología",9.4,5,13.75
+AF-174,2026-02-20 14:47:09,Guía de Liderazgo Vol. 31,59,Liderazgo,"estrategia, comunicación, equipos",8.2,4,12.02
+AF-175,2025-09-24 03:47:09,Guía de Crecimiento Personal Vol. 72,65,Crecimiento Personal,"psicología, cambio, resiliencia",8.0,4,13.82
+CB-176,2025-11-23 08:47:09,Guía de Finanzas Personales Vol. 61,57,Finanzas Personales,"dinero, inversión, presupuesto",9.7,5,16.58
+AF-177,2025-07-29 16:47:09,Guía de Crecimiento Personal Vol. 32,58,Crecimiento Personal,"psicología, autoestima, motivación",9.5,3,12.92
+AF-178,2025-04-30 21:47:09,Guía de Finanzas Personales Vol. 78,51,Finanzas Personales,"inversión, libertad financiera, presupuesto",7.6,4,10.61
+AF-179,2025-09-15 03:47:09,Guía de Productividad Vol. 96,65,Productividad,"disciplina, metas, mañana",8.2,3,13.7
+AF-180,2025-10-03 21:47:09,Guía de Liderazgo Vol. 40,58,Liderazgo,"comunicación, management, estrategia, oficina",9.4,5,13.74
+AF-181,2026-02-08 22:47:09,Guía de Crecimiento Personal Vol. 6,57,Crecimiento Personal,"motivación, autoestima, resiliencia, psicología, cambio",7.5,4,11.61
+AF-182,2025-07-27 08:47:09,Guía de Liderazgo Vol. 33,65,Liderazgo,"estrategia, management, comunicación, oficina, equipos",7.5,5,14.34
+AF-183,2025-07-09 15:47:09,Guía de Productividad Vol. 68,51,Productividad,"disciplina, hábitos, metas",8.2,5,11.26
+CB-184,2025-05-02 07:47:09,Guía de Crecimiento Personal Vol. 48,51,Crecimiento Personal,"resiliencia, cambio, psicología, motivación, autoestima",7.0,5,14.02
+AF-185,2025-10-21 23:47:09,Guía de Finanzas Personales Vol. 37,50,Finanzas Personales,"presupuesto, inversión, ahorro, dinero, libertad financiera",7.7,5,11.4
+AF-186,2026-03-21 16:47:09,Guía de Productividad Vol. 48,62,Productividad,"metas, mañana, disciplina, tiempo",9.1,3,13.76
+CB-187,2025-10-10 09:47:09,Guía de Crecimiento Personal Vol. 49,65,Crecimiento Personal,"autoestima, motivación, resiliencia",8.5,4,17.54
+AF-188,2025-09-14 08:47:09,Guía de Productividad Vol. 68,51,Productividad,"mañana, metas, tiempo",7.8,3,10.97
+AF-189,2025-06-02 00:47:09,Guía de Productividad Vol. 23,60,Productividad,"mañana, metas, disciplina",9.3,5,14.79
+CB-190,2026-01-05 14:47:09,Guía de Ansiedad Vol. 73,62,Ansiedad,"calma, paz mental, respiración, salud, estrés",9.4,5,18.05
+AF-191,2025-09-10 05:47:09,Guía de Productividad Vol. 13,63,Productividad,"hábitos, enfoque, tiempo",9.9,4,13.61
+AF-192,2025-05-30 17:47:09,Guía de Liderazgo Vol. 71,62,Liderazgo,"equipos, comunicación, management, oficina",9.3,4,14.65
+AF-193,2025-09-08 18:47:09,Guía de Crecimiento Personal Vol. 92,54,Crecimiento Personal,"cambio, psicología, motivación, autoestima, resiliencia",7.0,4,11.19
+CB-194,2026-02-24 01:47:09,Guía de Ansiedad Vol. 56,64,Ansiedad,"calma, salud, respiración, estrés, paz mental",7.3,5,16.14
+AF-195,2025-07-03 23:47:09,Guía de Productividad Vol. 38,63,Productividad,"hábitos, metas, mañana, enfoque",8.6,5,14.16
+AF-196,2025-08-28 14:47:09,Guía de Crecimiento Personal Vol. 19,52,Crecimiento Personal,"cambio, psicología, motivación",7.9,3,10.57
+AF-197,2025-11-04 01:47:09,Guía de Finanzas Personales Vol. 79,56,Finanzas Personales,"ahorro, inversión, presupuesto, libertad financiera",9.8,4,13.78
+AF-198,2025-09-20 14:47:09,Guía de Crecimiento Personal Vol. 84,54,Crecimiento Personal,"psicología, motivación, cambio, resiliencia",7.5,4,12.49
+AF-199,2026-01-27 20:47:09,Guía de Crecimiento Personal Vol. 74,57,Crecimiento Personal,"cambio, psicología, motivación, resiliencia",7.3,5,11.95
+AF-200,2025-08-24 23:47:09,Guía de Finanzas Personales Vol. 4,64,Finanzas Personales,"inversión, presupuesto, libertad financiera, ahorro, dinero",9.0,3,14.07
+AF-201,2025-05-12 02:47:09,Guía de Crecimiento Personal Vol. 49,52,Crecimiento Personal,"resiliencia, cambio, psicología, motivación",8.6,5,12.04
+AF-202,2026-03-20 12:47:09,Guía de Finanzas Personales Vol. 77,52,Finanzas Personales,"inversión, dinero, ahorro",8.9,3,11.48
+AF-203,2026-02-11 22:47:09,Guía de Liderazgo Vol. 56,53,Liderazgo,"oficina, empatía, equipos",8.5,5,12.47
+AF-204,2025-07-05 02:47:09,Guía de Crecimiento Personal Vol. 60,54,Crecimiento Personal,"autoestima, cambio, resiliencia, motivación",8.2,3,10.63
+AF-205,2025-06-20 15:47:09,Guía de Crecimiento Personal Vol. 27,65,Crecimiento Personal,"cambio, autoestima, motivación, psicología",8.0,4,13.09
+AF-206,2025-08-20 03:47:09,Guía de Productividad Vol. 87,55,Productividad,"mañana, metas, disciplina, enfoque, hábitos",8.0,4,12.92
+AF-207,2025-08-10 21:47:09,Guía de Ansiedad Vol. 82,63,Ansiedad,"estrés, calma, mindfulness, respiración",8.8,4,13.01
+AF-208,2026-01-19 11:47:09,Guía de Productividad Vol. 74,53,Productividad,"mañana, enfoque, metas, hábitos, disciplina",7.3,5,12.48
+AF-209,2026-03-04 09:47:09,Guía de Crecimiento Personal Vol. 79,62,Crecimiento Personal,"autoestima, psicología, motivación, cambio, resiliencia",9.4,5,15.2
+CB-210,2025-11-24 10:47:09,Guía de Ansiedad Vol. 41,53,Ansiedad,"paz mental, estrés, mindfulness",8.1,3,14.17
+CB-211,2025-12-10 10:47:09,Guía de Crecimiento Personal Vol. 55,55,Crecimiento Personal,"resiliencia, motivación, psicología, autoestima",8.5,3,14.12
+CB-212,2025-12-07 06:47:09,Guía de Liderazgo Vol. 2,65,Liderazgo,"equipos, management, comunicación",8.2,4,16.93
+CB-213,2026-01-02 08:47:09,Guía de Finanzas Personales Vol. 4,57,Finanzas Personales,"ahorro, dinero, libertad financiera, inversión",7.5,4,15.28
+AF-214,2026-03-23 22:47:09,Guía de Finanzas Personales Vol. 15,58,Finanzas Personales,"dinero, ahorro, libertad financiera, inversión, presupuesto",10.0,3,13.57
+AF-215,2025-10-20 13:47:09,Guía de Productividad Vol. 58,58,Productividad,"hábitos, tiempo, disciplina, metas",7.6,5,13.08
+AF-216,2025-07-19 01:47:09,Guía de Crecimiento Personal Vol. 22,54,Crecimiento Personal,"motivación, autoestima, psicología",8.1,4,12.04
+AF-217,2025-06-29 22:47:09,Guía de Liderazgo Vol. 38,58,Liderazgo,"estrategia, oficina, equipos, management, comunicación",10.0,5,13.35
+CB-218,2025-06-10 03:47:09,Guía de Liderazgo Vol. 32,62,Liderazgo,"equipos, comunicación, empatía, management",8.2,4,15.65
+AF-219,2025-10-23 17:47:09,Guía de Liderazgo Vol. 89,61,Liderazgo,"management, empatía, oficina, comunicación",7.3,4,13.12
+AF-220,2025-06-29 09:47:09,Guía de Crecimiento Personal Vol. 28,63,Crecimiento Personal,"cambio, psicología, motivación",9.5,4,14.44
+AF-221,2025-04-24 04:47:09,Guía de Liderazgo Vol. 88,51,Liderazgo,"oficina, management, estrategia",7.4,3,10.28
+CB-222,2026-03-21 20:47:09,Guía de Ansiedad Vol. 84,59,Ansiedad,"paz mental, estrés, salud",7.8,4,16.03
+CB-223,2025-08-17 07:47:09,Guía de Liderazgo Vol. 93,57,Liderazgo,"estrategia, oficina, comunicación, management",7.6,3,13.97
+AF-224,2025-06-14 18:47:09,Guía de Productividad Vol. 2,60,Productividad,"tiempo, mañana, disciplina",7.2,4,11.78
+AF-225,2025-07-17 05:47:09,Guía de Liderazgo Vol. 18,62,Liderazgo,"estrategia, equipos, oficina",8.6,3,13.42
+AF-226,2026-02-19 14:47:09,Guía de Ansiedad Vol. 81,54,Ansiedad,"calma, respiración, mindfulness, estrés",9.7,3,12.65
+AF-227,2025-09-16 13:47:09,Guía de Crecimiento Personal Vol. 41,54,Crecimiento Personal,"psicología, autoestima, cambio",8.7,5,13.09
+CB-228,2026-02-21 17:47:09,Guía de Liderazgo Vol. 27,56,Liderazgo,"management, empatía, oficina, estrategia, equipos",8.2,3,14.8
+AF-229,2025-12-20 17:47:09,Guía de Productividad Vol. 47,60,Productividad,"tiempo, metas, disciplina",8.1,5,12.9
+CB-230,2025-11-22 04:47:09,Guía de Productividad Vol. 2,58,Productividad,"hábitos, disciplina, tiempo",8.5,5,16.78
+AF-231,2025-11-10 09:47:09,Guía de Productividad Vol. 82,54,Productividad,"hábitos, enfoque, disciplina, metas",9.8,3,12.27
+AF-232,2025-09-29 12:47:09,Guía de Productividad Vol. 40,63,Productividad,"mañana, hábitos, disciplina, metas, tiempo",7.3,5,13.97
+AF-233,2025-10-30 19:47:09,Guía de Ansiedad Vol. 16,50,Ansiedad,"mindfulness, estrés, salud, respiración, paz mental",8.6,5,11.32
+AF-234,2026-02-13 11:47:09,Guía de Liderazgo Vol. 94,53,Liderazgo,"empatía, management, estrategia",8.6,4,12.32
+CB-235,2025-06-21 22:47:09,Guía de Crecimiento Personal Vol. 66,61,Crecimiento Personal,"cambio, motivación, resiliencia",7.5,3,16.24
+AF-236,2025-05-12 08:47:09,Guía de Productividad Vol. 6,50,Productividad,"hábitos, tiempo, enfoque",8.1,3,9.91
+AF-237,2026-01-06 12:47:09,Guía de Crecimiento Personal Vol. 29,60,Crecimiento Personal,"cambio, psicología, motivación",9.5,5,14.0
+AF-238,2025-10-28 21:47:09,Guía de Ansiedad Vol. 29,51,Ansiedad,"estrés, respiración, paz mental, mindfulness",8.0,5,11.61
+AF-239,2025-08-26 19:47:09,Guía de Liderazgo Vol. 95,57,Liderazgo,"empatía, comunicación, management, oficina",9.2,5,14.02
+CB-240,2025-08-07 07:47:09,Guía de Crecimiento Personal Vol. 4,57,Crecimiento Personal,"psicología, autoestima, motivación, cambio, resiliencia",9.5,5,16.27
+AF-241,2025-10-31 05:47:09,Guía de Crecimiento Personal Vol. 63,51,Crecimiento Personal,"psicología, autoestima, cambio",9.8,5,12.43
+AF-242,2025-09-04 01:47:09,Guía de Productividad Vol. 75,53,Productividad,"mañana, tiempo, hábitos, enfoque, metas",8.3,3,10.72
+AF-243,2026-02-16 18:47:09,Guía de Crecimiento Personal Vol. 90,60,Crecimiento Personal,"cambio, psicología, autoestima, resiliencia",9.8,3,13.96
+CB-244,2025-06-23 17:47:09,Guía de Ansiedad Vol. 58,64,Ansiedad,"respiración, estrés, paz mental, calma",8.4,4,16.53
+CB-245,2025-05-19 12:47:09,Guía de Liderazgo Vol. 91,51,Liderazgo,"empatía, equipos, oficina",9.1,4,14.54
+AF-246,2025-05-24 22:47:09,Guía de Ansiedad Vol. 4,62,Ansiedad,"calma, salud, mindfulness, estrés",8.4,3,12.34
+CB-247,2025-06-27 17:47:09,Guía de Crecimiento Personal Vol. 48,52,Crecimiento Personal,"resiliencia, psicología, autoestima, cambio, motivación",7.6,5,14.59
+AF-248,2025-11-27 20:47:09,Guía de Liderazgo Vol. 16,51,Liderazgo,"oficina, equipos, management, empatía",8.2,3,10.57
+AF-249,2025-12-24 16:47:09,Guía de Ansiedad Vol. 36,58,Ansiedad,"mindfulness, estrés, salud, paz mental",7.9,4,13.32
+CB-250,2025-11-05 13:47:09,Guía de Crecimiento Personal Vol. 18,63,Crecimiento Personal,"resiliencia, motivación, psicología",10.0,5,18.69
+AF-251,2025-09-13 16:47:09,Guía de Finanzas Personales Vol. 63,61,Finanzas Personales,"libertad financiera, dinero, inversión, presupuesto, ahorro",7.1,5,12.69
+AF-252,2025-08-14 09:47:09,Guía de Crecimiento Personal Vol. 68,61,Crecimiento Personal,"motivación, resiliencia, autoestima, psicología, cambio",7.8,5,12.71
+AF-253,2025-10-21 09:47:09,Guía de Crecimiento Personal Vol. 46,55,Crecimiento Personal,"motivación, psicología, cambio",9.1,5,12.11
+AF-254,2026-01-18 06:47:09,Guía de Finanzas Personales Vol. 25,65,Finanzas Personales,"dinero, inversión, presupuesto, ahorro, libertad financiera",7.2,5,13.54
+CB-255,2025-06-19 07:47:09,Guía de Finanzas Personales Vol. 26,54,Finanzas Personales,"inversión, dinero, ahorro, presupuesto",7.4,5,15.83
+AF-256,2026-03-17 06:47:09,Guía de Productividad Vol. 48,62,Productividad,"hábitos, enfoque, metas, mañana, disciplina",9.9,5,15.75
+AF-257,2025-06-27 20:47:09,Guía de Ansiedad Vol. 91,61,Ansiedad,"salud, calma, mindfulness",8.1,5,14.13
+AF-258,2026-01-02 19:47:09,Guía de Finanzas Personales Vol. 51,51,Finanzas Personales,"libertad financiera, dinero, presupuesto",7.7,5,10.76
+AF-259,2025-05-28 02:47:09,Guía de Productividad Vol. 31,61,Productividad,"mañana, hábitos, enfoque, disciplina",7.0,3,11.7
+AF-260,2025-11-03 02:47:09,Guía de Productividad Vol. 93,50,Productividad,"tiempo, disciplina, metas",9.9,4,11.94
+AF-261,2025-06-15 17:47:09,Guía de Productividad Vol. 62,57,Productividad,"tiempo, hábitos, metas",7.9,4,11.87
+AF-262,2025-12-01 20:47:09,Guía de Crecimiento Personal Vol. 21,52,Crecimiento Personal,"autoestima, psicología, cambio, motivación, resiliencia",8.3,5,11.38
+CB-263,2025-11-11 09:47:09,Guía de Liderazgo Vol. 27,56,Liderazgo,"estrategia, comunicación, empatía, management",7.8,3,13.79
+AF-264,2025-08-03 18:47:09,Guía de Crecimiento Personal Vol. 20,51,Crecimiento Personal,"autoestima, cambio, resiliencia, motivación",9.5,5,12.65
+CB-265,2025-09-05 17:47:09,Guía de Ansiedad Vol. 82,59,Ansiedad,"respiración, estrés, paz mental",9.4,4,16.48
+AF-266,2025-09-08 09:47:09,Guía de Crecimiento Personal Vol. 24,61,Crecimiento Personal,"psicología, motivación, cambio, autoestima",7.8,4,12.63
+CB-267,2026-01-23 12:47:09,Guía de Productividad Vol. 11,61,Productividad,"tiempo, metas, mañana, enfoque, hábitos",9.5,5,17.29
+AF-268,2026-03-06 19:47:09,Guía de Crecimiento Personal Vol. 74,57,Crecimiento Personal,"psicología, autoestima, motivación, cambio",8.5,5,13.75
+CB-269,2026-03-10 19:47:09,Guía de Crecimiento Personal Vol. 23,55,Crecimiento Personal,"motivación, resiliencia, autoestima",8.3,5,15.52
+AF-270,2025-04-30 13:47:09,Guía de Liderazgo Vol. 41,52,Liderazgo,"management, comunicación, estrategia",8.7,4,11.79
+AF-271,2025-09-17 08:47:09,Guía de Finanzas Personales Vol. 54,53,Finanzas Personales,"inversión, libertad financiera, dinero, ahorro",9.8,5,13.56
+AF-272,2025-11-14 16:47:09,Guía de Crecimiento Personal Vol. 34,62,Crecimiento Personal,"cambio, resiliencia, autoestima, psicología, motivación",8.2,5,14.22
+AF-273,2025-09-26 00:47:09,Guía de Liderazgo Vol. 89,57,Liderazgo,"estrategia, management, empatía",9.7,3,12.43
+AF-274,2025-11-23 10:47:09,Guía de Crecimiento Personal Vol. 90,53,Crecimiento Personal,"motivación, psicología, cambio",8.3,4,11.29
+AF-275,2026-01-08 03:47:09,Guía de Ansiedad Vol. 57,56,Ansiedad,"salud, respiración, paz mental, estrés",8.5,3,11.08
+CB-276,2025-10-25 13:47:09,Guía de Finanzas Personales Vol. 73,50,Finanzas Personales,"inversión, libertad financiera, ahorro",7.7,4,12.95
+CB-277,2025-12-22 09:47:09,Guía de Liderazgo Vol. 60,62,Liderazgo,"oficina, estrategia, equipos, management, empatía",8.8,3,17.22
+AF-278,2025-08-10 22:47:09,Guía de Liderazgo Vol. 21,58,Liderazgo,"estrategia, oficina, empatía, comunicación, equipos",7.1,5,13.21
+AF-279,2026-03-01 00:47:09,Guía de Ansiedad Vol. 35,63,Ansiedad,"estrés, salud, respiración, calma, paz mental",8.8,3,12.95
+AF-280,2025-11-13 09:47:09,Guía de Liderazgo Vol. 55,62,Liderazgo,"management, empatía, equipos, estrategia",7.9,5,14.5
+CB-281,2025-09-11 23:47:09,Guía de Finanzas Personales Vol. 85,61,Finanzas Personales,"libertad financiera, dinero, inversión, ahorro, presupuesto",7.2,4,16.08
+AF-282,2026-01-03 00:47:09,Guía de Liderazgo Vol. 25,54,Liderazgo,"equipos, oficina, management, empatía, estrategia",9.0,5,11.85
+AF-283,2025-09-23 20:47:09,Guía de Crecimiento Personal Vol. 52,62,Crecimiento Personal,"autoestima, motivación, cambio, resiliencia, psicología",9.7,5,14.47
+AF-284,2025-07-26 12:47:09,Guía de Finanzas Personales Vol. 24,59,Finanzas Personales,"presupuesto, inversión, dinero",7.8,5,13.73
+AF-285,2026-02-17 00:47:09,Guía de Productividad Vol. 29,61,Productividad,"disciplina, enfoque, tiempo",9.4,4,13.64
+AF-286,2025-09-23 04:47:09,Guía de Productividad Vol. 61,51,Productividad,"metas, disciplina, hábitos, mañana, tiempo",8.5,5,11.71
+CB-287,2025-06-04 06:47:09,Guía de Ansiedad Vol. 18,56,Ansiedad,"respiración, calma, salud, estrés",7.9,5,15.01
+AF-288,2025-07-14 06:47:09,Guía de Ansiedad Vol. 41,51,Ansiedad,"respiración, paz mental, mindfulness",9.3,3,11.5
+AF-289,2025-10-31 15:47:09,Guía de Productividad Vol. 17,63,Productividad,"tiempo, disciplina, metas, mañana, enfoque",7.0,5,13.0
+AF-290,2025-09-26 20:47:09,Guía de Finanzas Personales Vol. 25,50,Finanzas Personales,"ahorro, inversión, libertad financiera, presupuesto, dinero",7.4,4,10.71
+CB-291,2025-12-30 02:47:09,Guía de Productividad Vol. 39,59,Productividad,"disciplina, metas, enfoque, mañana",9.7,3,15.84
+AF-292,2025-06-26 02:47:09,Guía de Ansiedad Vol. 52,50,Ansiedad,"mindfulness, salud, calma",9.2,5,12.11
+AF-293,2025-06-22 04:47:09,Guía de Productividad Vol. 49,58,Productividad,"metas, hábitos, disciplina, enfoque, tiempo",9.0,3,11.7
+AF-294,2025-06-14 12:47:09,Guía de Productividad Vol. 71,58,Productividad,"disciplina, mañana, metas, enfoque",9.1,3,12.25
+AF-295,2025-08-03 23:47:09,Guía de Finanzas Personales Vol. 78,54,Finanzas Personales,"ahorro, libertad financiera, inversión, presupuesto",9.4,4,11.9
+AF-296,2025-04-24 15:47:09,Guía de Ansiedad Vol. 46,63,Ansiedad,"mindfulness, estrés, respiración, calma",9.1,4,13.81
+AF-297,2026-03-18 22:47:09,Guía de Productividad Vol. 74,65,Productividad,"hábitos, metas, disciplina",9.2,3,14.91
+AF-298,2025-10-01 04:47:09,Guía de Liderazgo Vol. 34,64,Liderazgo,"oficina, equipos, estrategia",9.6,4,15.2
+AF-299,2025-09-08 14:47:09,Guía de Productividad Vol. 98,51,Productividad,"mañana, disciplina, enfoque",8.1,4,12.16
+CB-300,2026-03-21 20:47:09,Guía de Liderazgo Vol. 24,53,Liderazgo,"management, estrategia, empatía, equipos",9.1,4,15.75
+CB-301,2025-06-29 06:47:09,Guía de Productividad Vol. 21,53,Productividad,"metas, tiempo, disciplina, hábitos",8.8,4,15.22
+AF-302,2026-02-13 14:47:09,Guía de Productividad Vol. 53,64,Productividad,"hábitos, enfoque, metas",7.0,5,13.85
+AF-303,2026-02-03 10:47:09,Guía de Liderazgo Vol. 67,53,Liderazgo,"estrategia, equipos, management, comunicación",9.0,5,12.37
+CB-304,2025-08-16 08:47:09,Guía de Ansiedad Vol. 65,65,Ansiedad,"mindfulness, estrés, respiración, salud",7.7,4,15.95
+AF-305,2026-03-23 15:47:09,Guía de Crecimiento Personal Vol. 31,52,Crecimiento Personal,"cambio, resiliencia, autoestima, motivación",8.3,3,12.01
+CB-306,2025-10-15 02:47:09,Guía de Crecimiento Personal Vol. 5,50,Crecimiento Personal,"resiliencia, psicología, cambio",8.7,5,15.19
+AF-307,2025-08-14 15:47:09,Guía de Ansiedad Vol. 59,60,Ansiedad,"calma, salud, respiración, paz mental, mindfulness",9.1,3,12.24
+AF-308,2025-06-16 23:47:09,Guía de Liderazgo Vol. 71,61,Liderazgo,"oficina, estrategia, equipos, management, comunicación",9.5,5,14.89
+AF-309,2026-03-14 12:47:09,Guía de Ansiedad Vol. 16,62,Ansiedad,"respiración, mindfulness, paz mental",7.3,4,12.14
+AF-310,2025-07-23 13:47:09,Guía de Crecimiento Personal Vol. 59,54,Crecimiento Personal,"autoestima, resiliencia, psicología, motivación",9.5,4,13.4
+AF-311,2025-08-28 23:47:09,Guía de Ansiedad Vol. 14,62,Ansiedad,"calma, salud, paz mental, respiración, mindfulness",8.3,5,14.88
+AF-312,2026-02-01 11:47:09,Guía de Liderazgo Vol. 38,64,Liderazgo,"equipos, management, empatía",9.5,5,15.77
+CB-313,2026-02-16 09:47:09,Guía de Ansiedad Vol. 80,59,Ansiedad,"paz mental, mindfulness, calma, salud, respiración",9.1,4,16.47
+AF-314,2025-09-06 20:47:09,Guía de Crecimiento Personal Vol. 87,59,Crecimiento Personal,"autoestima, resiliencia, cambio, motivación",7.4,5,12.11
+AF-315,2025-08-16 14:47:09,Guía de Liderazgo Vol. 19,51,Liderazgo,"empatía, equipos, oficina, comunicación, estrategia",7.3,5,11.83
+AF-316,2025-08-29 21:47:09,Guía de Crecimiento Personal Vol. 31,59,Crecimiento Personal,"autoestima, cambio, motivación, psicología, resiliencia",9.9,3,12.28
+AF-317,2025-07-21 14:47:09,Guía de Crecimiento Personal Vol. 29,61,Crecimiento Personal,"resiliencia, motivación, psicología, autoestima, cambio",8.3,5,13.0
+AF-318,2025-12-18 13:47:09,Guía de Crecimiento Personal Vol. 6,63,Crecimiento Personal,"resiliencia, psicología, autoestima, cambio",8.8,4,13.01
+AF-319,2025-08-13 20:47:09,Guía de Productividad Vol. 20,60,Productividad,"hábitos, metas, enfoque, mañana, tiempo",7.2,5,12.74
+AF-320,2025-10-25 00:47:09,Guía de Finanzas Personales Vol. 21,63,Finanzas Personales,"libertad financiera, presupuesto, ahorro, inversión, dinero",9.7,5,14.61
+CB-321,2026-03-07 22:47:09,Guía de Finanzas Personales Vol. 68,65,Finanzas Personales,"ahorro, libertad financiera, dinero, inversión, presupuesto",7.7,5,17.58
+AF-322,2026-01-09 05:47:09,Guía de Liderazgo Vol. 49,53,Liderazgo,"empatía, comunicación, estrategia, oficina",9.7,4,12.48
+AF-323,2026-03-09 17:47:09,Guía de Liderazgo Vol. 84,56,Liderazgo,"comunicación, oficina, estrategia, management",9.9,5,13.72
+CB-324,2025-07-10 15:47:09,Guía de Ansiedad Vol. 88,63,Ansiedad,"mindfulness, calma, respiración",8.9,3,17.04
+AF-325,2025-09-03 04:47:09,Guía de Liderazgo Vol. 5,52,Liderazgo,"oficina, equipos, empatía",8.7,5,12.89
+AF-326,2026-02-16 16:47:09,Guía de Crecimiento Personal Vol. 56,60,Crecimiento Personal,"cambio, autoestima, psicología",7.0,5,13.24
+AF-327,2025-05-09 06:47:09,Guía de Productividad Vol. 46,53,Productividad,"disciplina, enfoque, hábitos, mañana",9.3,4,12.01
+CB-328,2026-02-01 19:47:09,Guía de Ansiedad Vol. 18,62,Ansiedad,"paz mental, mindfulness, salud, respiración, calma",9.9,3,16.96
+CB-329,2025-07-04 20:47:09,Guía de Productividad Vol. 74,62,Productividad,"metas, hábitos, enfoque, disciplina, mañana",7.6,5,17.4
+CB-330,2025-05-27 23:47:09,Guía de Finanzas Personales Vol. 33,56,Finanzas Personales,"inversión, ahorro, dinero",8.4,5,15.05
+CB-331,2025-12-10 01:47:09,Guía de Finanzas Personales Vol. 63,60,Finanzas Personales,"inversión, libertad financiera, ahorro, presupuesto",8.9,3,15.59
+AF-332,2026-03-18 04:47:09,Guía de Liderazgo Vol. 89,54,Liderazgo,"comunicación, empatía, estrategia, equipos, oficina",7.0,3,11.37
+AF-333,2026-02-27 17:47:09,Guía de Liderazgo Vol. 18,60,Liderazgo,"management, estrategia, empatía, equipos",8.5,3,12.1
+AF-334,2026-02-15 09:47:09,Guía de Ansiedad Vol. 69,56,Ansiedad,"salud, estrés, calma, respiración",9.5,5,12.51
+AF-335,2025-09-18 19:47:09,Guía de Finanzas Personales Vol. 28,51,Finanzas Personales,"dinero, presupuesto, libertad financiera, ahorro, inversión",8.2,5,12.27
+AF-336,2026-01-11 19:47:09,Guía de Finanzas Personales Vol. 12,62,Finanzas Personales,"libertad financiera, ahorro, dinero, presupuesto",9.5,5,15.02
+AF-337,2025-10-29 22:47:09,Guía de Ansiedad Vol. 73,54,Ansiedad,"salud, respiración, paz mental, estrés, calma",9.3,3,11.08
+CB-338,2026-01-15 11:47:09,Guía de Ansiedad Vol. 67,61,Ansiedad,"respiración, salud, estrés, calma",9.9,4,16.36
+AF-339,2025-11-01 22:47:09,Guía de Liderazgo Vol. 75,55,Liderazgo,"estrategia, management, empatía, comunicación",9.0,3,12.03
+AF-340,2025-09-13 21:47:09,Guía de Liderazgo Vol. 45,65,Liderazgo,"comunicación, oficina, equipos, management",7.5,3,13.28
+CB-341,2026-02-19 20:47:09,Guía de Ansiedad Vol. 47,53,Ansiedad,"mindfulness, respiración, paz mental, calma, estrés",8.4,4,14.76
+AF-342,2025-07-07 16:47:09,Guía de Crecimiento Personal Vol. 3,57,Crecimiento Personal,"motivación, resiliencia, autoestima",8.9,3,13.13
+CB-343,2025-07-19 22:47:09,Guía de Ansiedad Vol. 67,62,Ansiedad,"calma, estrés, paz mental, salud, respiración",8.3,4,17.28
+AF-344,2025-11-06 19:47:09,Guía de Finanzas Personales Vol. 19,55,Finanzas Personales,"libertad financiera, dinero, ahorro, inversión, presupuesto",8.8,3,11.36
+CB-345,2026-01-21 07:47:09,Guía de Ansiedad Vol. 67,63,Ansiedad,"calma, estrés, mindfulness",8.4,5,17.5
+AF-346,2025-11-28 22:47:09,Guía de Productividad Vol. 62,54,Productividad,"metas, hábitos, tiempo, enfoque, mañana",8.1,3,11.75
+AF-347,2025-06-05 00:47:09,Guía de Crecimiento Personal Vol. 99,62,Crecimiento Personal,"resiliencia, autoestima, motivación, cambio",7.8,3,13.62
+AF-348,2026-03-24 21:47:09,Guía de Finanzas Personales Vol. 53,58,Finanzas Personales,"ahorro, libertad financiera, dinero",8.6,5,12.41
+AF-349,2025-10-28 10:47:09,Guía de Liderazgo Vol. 53,61,Liderazgo,"equipos, management, empatía",7.8,5,13.45
+AF-350,2025-09-28 09:47:09,Guía de Crecimiento Personal Vol. 97,56,Crecimiento Personal,"resiliencia, cambio, autoestima, motivación",8.7,4,12.06
+AF-351,2026-01-30 10:47:09,Guía de Crecimiento Personal Vol. 95,54,Crecimiento Personal,"autoestima, motivación, cambio, resiliencia, psicología",7.6,4,12.17
+AF-352,2025-06-03 10:47:09,Guía de Productividad Vol. 21,62,Productividad,"hábitos, disciplina, mañana, tiempo, enfoque",7.3,4,12.49
+CB-353,2026-01-14 00:47:09,Guía de Crecimiento Personal Vol. 52,59,Crecimiento Personal,"resiliencia, autoestima, cambio, motivación, psicología",7.0,5,16.66
+CB-354,2025-11-14 02:47:09,Guía de Finanzas Personales Vol. 66,57,Finanzas Personales,"inversión, ahorro, libertad financiera, presupuesto, dinero",9.9,3,16.84
+AF-355,2025-08-01 05:47:09,Guía de Crecimiento Personal Vol. 76,56,Crecimiento Personal,"autoestima, resiliencia, cambio, motivación, psicología",8.0,4,11.65
+AF-356,2025-06-22 07:47:09,Guía de Finanzas Personales Vol. 1,58,Finanzas Personales,"presupuesto, ahorro, dinero",7.2,4,11.88
+AF-357,2026-02-17 15:47:09,Guía de Finanzas Personales Vol. 74,58,Finanzas Personales,"presupuesto, libertad financiera, dinero, inversión, ahorro",9.3,4,13.61
+AF-358,2025-09-04 22:47:09,Guía de Liderazgo Vol. 9,62,Liderazgo,"equipos, estrategia, empatía, comunicación, management",8.5,3,13.55
+AF-359,2025-09-07 20:47:09,Guía de Crecimiento Personal Vol. 87,60,Crecimiento Personal,"resiliencia, motivación, cambio",7.9,3,13.24
+AF-360,2026-03-06 02:47:09,Guía de Ansiedad Vol. 64,56,Ansiedad,"salud, mindfulness, paz mental",7.6,3,12.17
+CB-361,2026-01-01 09:47:09,Guía de Productividad Vol. 16,52,Productividad,"disciplina, tiempo, hábitos, enfoque, metas",9.5,4,15.39
+AF-362,2025-10-18 03:47:09,Guía de Crecimiento Personal Vol. 24,58,Crecimiento Personal,"motivación, resiliencia, autoestima, cambio",8.4,5,12.37
+AF-363,2025-06-14 01:47:09,Guía de Ansiedad Vol. 59,53,Ansiedad,"calma, respiración, paz mental, salud, estrés",7.0,3,10.36
+AF-364,2025-11-24 13:47:09,Guía de Liderazgo Vol. 24,58,Liderazgo,"empatía, management, estrategia",8.1,4,12.5
+AF-365,2025-08-22 08:47:09,Guía de Liderazgo Vol. 52,58,Liderazgo,"equipos, comunicación, estrategia, empatía",9.1,3,13.09
+AF-366,2025-10-02 06:47:09,Guía de Crecimiento Personal Vol. 26,54,Crecimiento Personal,"motivación, cambio, autoestima, psicología, resiliencia",8.5,5,12.58
+AF-367,2025-06-12 05:47:09,Guía de Finanzas Personales Vol. 73,51,Finanzas Personales,"ahorro, inversión, libertad financiera, dinero",9.4,4,12.58
+AF-368,2025-08-03 09:47:09,Guía de Liderazgo Vol. 47,61,Liderazgo,"comunicación, empatía, estrategia, oficina, equipos",7.4,5,14.33
+AF-369,2025-12-17 11:47:09,Guía de Finanzas Personales Vol. 23,59,Finanzas Personales,"dinero, presupuesto, libertad financiera, inversión",9.7,4,13.88
+AF-370,2025-10-03 11:47:09,Guía de Ansiedad Vol. 82,60,Ansiedad,"salud, calma, respiración, estrés",7.2,4,12.06
+AF-371,2025-08-22 12:47:09,Guía de Liderazgo Vol. 78,62,Liderazgo,"management, empatía, estrategia, equipos",7.5,3,11.9
+AF-372,2026-01-16 17:47:09,Guía de Productividad Vol. 27,55,Productividad,"hábitos, disciplina, metas, mañana",8.6,3,12.34
+CB-373,2025-07-19 15:47:09,Guía de Finanzas Personales Vol. 20,52,Finanzas Personales,"presupuesto, dinero, ahorro, libertad financiera, inversión",8.3,3,13.31
+CB-374,2026-02-20 10:47:09,Guía de Liderazgo Vol. 42,65,Liderazgo,"comunicación, empatía, management, oficina",9.9,5,18.53
+AF-375,2025-09-25 15:47:09,Guía de Finanzas Personales Vol. 56,59,Finanzas Personales,"presupuesto, inversión, ahorro, libertad financiera",7.9,4,12.27
+CB-376,2026-02-22 22:47:09,Guía de Ansiedad Vol. 45,59,Ansiedad,"calma, estrés, respiración, mindfulness",7.9,4,16.35
+AF-377,2025-11-02 22:47:09,Guía de Finanzas Personales Vol. 48,56,Finanzas Personales,"libertad financiera, presupuesto, inversión, ahorro",7.5,5,12.74
+AF-378,2025-09-18 18:47:09,Guía de Crecimiento Personal Vol. 81,57,Crecimiento Personal,"resiliencia, psicología, motivación, cambio, autoestima",7.6,3,11.06
+AF-379,2025-06-15 00:47:09,Guía de Finanzas Personales Vol. 58,58,Finanzas Personales,"libertad financiera, presupuesto, ahorro, inversión, dinero",7.5,5,11.89
+AF-380,2026-01-04 02:47:09,Guía de Crecimiento Personal Vol. 94,50,Crecimiento Personal,"autoestima, motivación, resiliencia",8.5,4,11.09
+AF-381,2025-08-30 03:47:09,Guía de Productividad Vol. 43,52,Productividad,"hábitos, enfoque, tiempo",7.2,4,10.36
+AF-382,2025-08-08 06:47:09,Guía de Productividad Vol. 99,57,Productividad,"tiempo, mañana, hábitos, disciplina",8.4,3,12.14
+AF-383,2025-05-20 12:47:09,Guía de Liderazgo Vol. 42,55,Liderazgo,"estrategia, oficina, comunicación, equipos, empatía",8.9,3,11.67
+CB-384,2025-05-15 09:47:09,Guía de Productividad Vol. 31,63,Productividad,"hábitos, mañana, enfoque, tiempo",7.4,3,14.82
+AF-385,2026-03-09 16:47:09,Guía de Crecimiento Personal Vol. 89,54,Crecimiento Personal,"autoestima, motivación, resiliencia, cambio",7.3,5,11.63
+CB-386,2025-12-04 14:47:09,Guía de Ansiedad Vol. 90,53,Ansiedad,"respiración, mindfulness, paz mental",9.9,5,16.56
+CB-387,2025-07-30 09:47:09,Guía de Crecimiento Personal Vol. 46,54,Crecimiento Personal,"autoestima, cambio, psicología, motivación",8.7,5,16.04
+CB-388,2025-09-05 08:47:09,Guía de Liderazgo Vol. 42,64,Liderazgo,"comunicación, estrategia, equipos, oficina",8.6,4,16.69
+AF-389,2026-01-24 03:47:09,Guía de Productividad Vol. 100,62,Productividad,"mañana, hábitos, enfoque, tiempo, metas",8.0,3,13.22
+CB-390,2025-06-28 20:47:09,Guía de Crecimiento Personal Vol. 99,54,Crecimiento Personal,"psicología, resiliencia, motivación, cambio, autoestima",7.3,5,14.08
+AF-391,2026-02-19 23:47:09,Guía de Ansiedad Vol. 14,65,Ansiedad,"estrés, salud, respiración",9.0,5,15.25
+CB-392,2026-02-03 14:47:09,Guía de Ansiedad Vol. 78,52,Ansiedad,"mindfulness, respiración, estrés",8.4,5,14.22
+AF-393,2025-06-11 18:47:09,Guía de Crecimiento Personal Vol. 48,51,Crecimiento Personal,"psicología, autoestima, resiliencia, cambio, motivación",7.2,3,11.22
+AF-394,2026-02-03 04:47:09,Guía de Finanzas Personales Vol. 50,56,Finanzas Personales,"libertad financiera, inversión, dinero",8.9,3,12.27
+AF-395,2026-02-25 05:47:09,Guía de Finanzas Personales Vol. 46,64,Finanzas Personales,"presupuesto, ahorro, libertad financiera, dinero, inversión",8.5,5,13.87
+AF-396,2026-01-30 14:47:09,Guía de Liderazgo Vol. 71,60,Liderazgo,"management, estrategia, empatía, comunicación",7.7,5,12.78
+AF-397,2025-09-24 15:47:09,Guía de Crecimiento Personal Vol. 58,62,Crecimiento Personal,"autoestima, psicología, cambio",7.0,3,13.39
+AF-398,2025-07-02 23:47:09,Guía de Ansiedad Vol. 28,60,Ansiedad,"salud, paz mental, mindfulness",7.3,4,12.36
+AF-399,2025-10-07 06:47:09,Guía de Finanzas Personales Vol. 32,57,Finanzas Personales,"dinero, ahorro, libertad financiera, inversión",8.7,3,12.72
+CB-400,2025-12-02 04:47:09,Guía de Finanzas Personales Vol. 13,59,Finanzas Personales,"libertad financiera, presupuesto, ahorro",9.3,4,16.15

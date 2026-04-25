@@ -1,0 +1,101 @@
+ID_Usuario,Fecha_Registro,Genero,Pais,Edad,Tema_Frecuente,Nivel_Estres_Declarado,Interacciones_Chatbot,Sentimiento_NLP
+USR-001,2025-07-04 14:47:10,Masculino,Puerto Rico,36,Productividad,1,15,0.65
+USR-002,2025-06-09 21:47:10,Masculino,Perú,30,Productividad,10,43,-1.0
+USR-003,2026-01-28 04:47:10,Masculino,Panamá,38,Finanzas Personales,1,13,0.93
+USR-004,2025-07-14 13:47:10,Femenino,Guatemala,47,Finanzas Personales,5,17,0.16
+USR-005,2025-10-12 18:47:10,Masculino,México,29,Liderazgo,3,18,0.67
+USR-006,2025-05-16 14:47:10,Femenino,Puerto Rico,29,Productividad,6,31,-0.14
+USR-007,2026-03-11 10:47:10,Femenino,República Dominicana,47,Productividad,7,24,-0.37
+USR-008,2025-09-18 17:47:10,Masculino,Colombia,39,Ansiedad,2,11,0.7
+USR-009,2025-10-26 20:47:10,Femenino,Honduras,27,Crecimiento Personal,5,31,0.08
+USR-010,2025-07-20 08:47:10,Masculino,Cuba,37,Ansiedad,5,19,0.07
+USR-011,2026-03-17 13:47:10,Masculino,Guatemala,27,Crecimiento Personal,7,30,-0.11
+USR-012,2025-11-14 23:47:10,Masculino,Ecuador,27,Productividad,4,16,0.38
+USR-013,2025-11-12 11:47:10,Femenino,Costa Rica,34,Finanzas Personales,6,26,-0.11
+USR-014,2026-01-23 23:47:10,Femenino,República Dominicana,18,Liderazgo,3,19,0.55
+USR-015,2025-07-03 07:47:10,Femenino,Chile,18,Crecimiento Personal,6,27,0.1
+USR-016,2025-11-26 10:47:10,Masculino,México,26,Productividad,2,14,0.68
+USR-017,2026-01-31 15:47:10,Masculino,Puerto Rico,21,Crecimiento Personal,10,44,-0.98
+USR-018,2025-07-13 05:47:10,Masculino,España,35,Liderazgo,6,23,-0.32
+USR-019,2025-09-23 11:47:10,Masculino,Costa Rica,22,Finanzas Personales,3,15,0.62
+USR-020,2025-12-29 15:47:10,Masculino,Honduras,18,Liderazgo,3,12,0.46
+USR-021,2026-02-07 17:47:10,Masculino,Paraguay,46,Liderazgo,4,16,0.04
+USR-022,2025-12-23 08:47:10,Masculino,España,29,Productividad,9,31,-1.0
+USR-023,2026-01-25 14:47:10,Masculino,Estados Unidos,32,Finanzas Personales,10,43,-0.72
+USR-024,2025-12-10 18:47:10,Masculino,El Salvador,18,Crecimiento Personal,6,34,0.04
+USR-025,2025-08-19 09:47:10,Masculino,Argentina,26,Productividad,6,20,-0.15
+USR-026,2025-05-10 01:47:10,Masculino,Perú,33,Productividad,1,14,0.54
+USR-027,2025-06-30 14:47:10,Femenino,El Salvador,20,Ansiedad,5,32,-0.17
+USR-028,2025-11-30 02:47:10,Femenino,Nicaragua,35,Crecimiento Personal,7,28,-0.64
+USR-029,2025-10-13 18:47:10,Masculino,Ecuador,25,Crecimiento Personal,1,10,0.54
+USR-030,2025-07-25 23:47:10,Femenino,El Salvador,29,Ansiedad,9,41,-1.0
+USR-031,2026-01-24 15:47:10,Masculino,El Salvador,25,Productividad,8,28,-0.87
+USR-032,2025-11-14 16:47:10,Masculino,México,50,Ansiedad,7,37,-0.41
+USR-033,2025-12-12 00:47:10,Femenino,Puerto Rico,31,Productividad,7,30,-0.14
+USR-034,2025-05-23 09:47:10,Masculino,Guatemala,21,Crecimiento Personal,3,18,0.28
+USR-035,2026-01-19 20:47:10,Masculino,Perú,40,Productividad,1,22,0.8
+USR-036,2025-08-22 03:47:10,Masculino,República Dominicana,19,Productividad,3,14,0.46
+USR-037,2025-11-24 12:47:10,Femenino,España,34,Ansiedad,10,31,-0.93
+USR-038,2025-06-30 12:47:10,Femenino,Panamá,18,Ansiedad,6,27,-0.34
+USR-039,2026-02-05 18:47:10,Masculino,Puerto Rico,18,Liderazgo,2,10,0.57
+USR-040,2025-10-18 17:47:10,Masculino,Honduras,33,Ansiedad,9,35,-1.0
+USR-041,2025-09-25 10:47:10,Masculino,Puerto Rico,39,Liderazgo,3,26,0.6
+USR-042,2025-06-17 14:47:10,Masculino,España,33,Liderazgo,2,14,0.46
+USR-043,2025-08-06 12:47:10,Femenino,Perú,30,Liderazgo,10,36,-0.87
+USR-044,2025-11-25 23:47:10,Masculino,Argentina,28,Crecimiento Personal,5,18,-0.24
+USR-045,2025-12-06 08:47:10,Femenino,Puerto Rico,18,Liderazgo,3,20,0.2
+USR-046,2025-07-09 08:47:10,Masculino,Honduras,24,Productividad,2,12,0.87
+USR-047,2025-05-15 00:47:10,Femenino,Bolivia,27,Finanzas Personales,9,31,-0.84
+USR-048,2025-10-22 08:47:10,Femenino,Uruguay,42,Liderazgo,4,22,0.3
+USR-049,2025-07-23 04:47:10,Masculino,Cuba,35,Ansiedad,4,20,0.49
+USR-050,2025-06-18 03:47:10,Masculino,Paraguay,18,Liderazgo,7,29,-0.54
+USR-051,2025-08-17 22:47:10,Masculino,Ecuador,35,Ansiedad,4,29,0.11
+USR-052,2025-09-13 02:47:10,Femenino,Puerto Rico,28,Crecimiento Personal,6,28,0.02
+USR-053,2025-09-03 20:47:10,Femenino,Bolivia,25,Liderazgo,1,10,1.0
+USR-054,2025-10-01 04:47:10,Masculino,México,38,Productividad,10,43,-1.0
+USR-055,2025-12-02 15:47:10,Masculino,Honduras,42,Finanzas Personales,4,23,-0.07
+USR-056,2025-06-26 14:47:10,Femenino,Perú,41,Crecimiento Personal,2,20,0.67
+USR-057,2025-09-22 08:47:10,Masculino,Ecuador,23,Liderazgo,7,32,-0.46
+USR-058,2025-09-25 03:47:10,Masculino,Estados Unidos,28,Crecimiento Personal,7,27,-0.33
+USR-059,2026-02-28 11:47:10,Femenino,Panamá,35,Liderazgo,4,28,0.37
+USR-060,2025-07-19 12:47:10,Masculino,Estados Unidos,41,Crecimiento Personal,8,31,-0.59
+USR-061,2025-08-22 12:47:10,Femenino,El Salvador,27,Finanzas Personales,10,40,-1.0
+USR-062,2025-12-23 10:47:10,Masculino,Panamá,30,Ansiedad,3,12,0.13
+USR-063,2025-11-06 06:47:10,Femenino,El Salvador,20,Crecimiento Personal,10,36,-0.87
+USR-064,2025-08-13 20:47:10,Femenino,Bolivia,20,Ansiedad,1,10,0.97
+USR-065,2025-12-17 12:47:10,Femenino,Panamá,40,Finanzas Personales,4,18,0.17
+USR-066,2026-01-29 05:47:10,Masculino,Paraguay,45,Finanzas Personales,9,40,-0.6
+USR-067,2025-09-12 07:47:10,Femenino,Venezuela,31,Crecimiento Personal,5,24,0.2
+USR-068,2025-09-16 22:47:10,Femenino,Guatemala,42,Ansiedad,5,31,-0.25
+USR-069,2025-08-20 03:47:10,Masculino,Ecuador,35,Liderazgo,9,29,-1.0
+USR-070,2025-12-18 04:47:10,Masculino,Ecuador,25,Productividad,7,35,-0.5
+USR-071,2026-02-12 03:47:10,Femenino,Argentina,35,Crecimiento Personal,7,22,-0.19
+USR-072,2025-11-24 08:47:10,Masculino,Paraguay,47,Liderazgo,5,29,0.21
+USR-073,2025-11-09 01:47:10,Femenino,Cuba,31,Ansiedad,5,30,-0.01
+USR-074,2026-02-21 09:47:10,Masculino,Chile,47,Crecimiento Personal,3,12,0.64
+USR-075,2025-09-04 03:47:10,Femenino,Ecuador,18,Crecimiento Personal,3,26,0.21
+USR-076,2025-11-03 23:47:10,Femenino,España,40,Crecimiento Personal,6,30,-0.04
+USR-077,2025-05-20 02:47:10,Masculino,Venezuela,32,Productividad,8,25,-0.45
+USR-078,2025-08-03 15:47:10,Masculino,El Salvador,29,Productividad,1,7,1.0
+USR-079,2025-08-13 05:47:10,Femenino,Honduras,32,Ansiedad,8,28,-0.56
+USR-080,2025-07-16 00:47:10,Masculino,República Dominicana,18,Ansiedad,10,33,-0.83
+USR-081,2025-08-02 17:47:10,Masculino,Colombia,29,Productividad,5,29,-0.06
+USR-082,2026-02-06 16:47:10,Femenino,Puerto Rico,35,Liderazgo,10,33,-0.82
+USR-083,2025-10-14 15:47:10,Femenino,Paraguay,46,Crecimiento Personal,6,22,-0.2
+USR-084,2025-12-15 13:47:10,Masculino,Nicaragua,26,Productividad,7,33,-0.32
+USR-085,2026-01-24 06:47:10,Femenino,Nicaragua,23,Ansiedad,9,35,-0.73
+USR-086,2025-06-06 23:47:10,Femenino,El Salvador,26,Finanzas Personales,5,27,0.21
+USR-087,2026-01-02 01:47:10,Masculino,Paraguay,41,Crecimiento Personal,10,42,-1.0
+USR-088,2026-02-23 13:47:10,Femenino,Puerto Rico,35,Ansiedad,6,28,-0.3
+USR-089,2025-11-18 06:47:10,Masculino,Paraguay,26,Productividad,9,33,-1.0
+USR-090,2025-08-15 03:47:10,Masculino,Estados Unidos,37,Crecimiento Personal,8,25,-0.84
+USR-091,2025-10-17 04:47:10,Femenino,Honduras,32,Finanzas Personales,6,35,-0.17
+USR-092,2025-06-24 14:47:10,Masculino,Guatemala,41,Crecimiento Personal,5,26,-0.15
+USR-093,2025-12-26 23:47:10,Femenino,Colombia,24,Productividad,9,32,-0.99
+USR-094,2025-09-24 15:47:10,Masculino,España,28,Ansiedad,5,24,-0.08
+USR-095,2025-06-27 11:47:10,Femenino,Colombia,28,Productividad,1,16,0.92
+USR-096,2025-12-05 01:47:10,Masculino,Bolivia,18,Productividad,10,39,-1.0
+USR-097,2025-11-15 06:47:10,Masculino,República Dominicana,34,Liderazgo,8,28,-0.41
+USR-098,2025-09-25 17:47:10,Masculino,Colombia,34,Productividad,3,16,0.59
+USR-099,2025-11-04 05:47:10,Femenino,Estados Unidos,32,Finanzas Personales,7,29,-0.23
+USR-100,2025-05-24 10:47:10,Masculino,Ecuador,29,Finanzas Personales,7,31,-0.36
