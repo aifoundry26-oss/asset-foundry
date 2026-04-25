@@ -76,3 +76,7 @@ Para evitar conflictos de dependencias y simplificar el inicio del ecosistema, s
   - **`index.html`:** La `webhookUrl` del chat de n8n (Archie) ahora usa `window.location.origin` + ruta relativa, haciéndola funcionar en cualquier dominio automáticamente.
   - **`dashboard.py`:** La URL del webhook de generación de libros ahora se construye dinámicamente desde la variable de entorno `BASE_DOMAIN`, con detección automática de protocolo (HTTP/HTTPS).
 - **Nota:** El `docker-compose.yml` original y `nginx.conf` se mantienen sin cambios para preservar la compatibilidad con el entorno de desarrollo local con Ngrok.
+
+**[25 de Abril de 2026] - Corrección de Rama Git para Despliegue**
+- **Git:** Se detectó un error de coincidencia de ramas (`src refspec main does not match any`) durante el primer push a GitHub. Se corrigió renombrando la rama local por defecto de `master` a `main` mediante `git branch -M main`, alineando el repositorio local con los estándares actuales de GitHub y las instrucciones de `DEPLOY.md`.
+
