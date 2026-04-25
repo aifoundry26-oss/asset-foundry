@@ -30,8 +30,9 @@ services:
     ports:
       - "${PORT:-80}:80"
     depends_on:
-      flask:
-        condition: service_healthy
+      - flask
+      - dashboard
+      - n8n
 
     networks:
       - asset_foundry_net
@@ -59,6 +60,7 @@ services:
     environment:
       - FLASK_ENV=production
       - PYTHONUNBUFFERED=1
+      - PORT=9000
     expose:
       - 9000
     restart: unless-stopped
@@ -84,6 +86,7 @@ services:
       - asset_foundry_net
     environment:
       - PYTHONUNBUFFERED=1
+      - PORT=8501
       # URL base del dominio público (para enlaces internos del dashboard)
       - BASE_DOMAIN=${DOMAIN:-localhost}
     expose:
@@ -112,6 +115,7 @@ services:
       - DB_TYPE=sqlite
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
       - N8N_DIAGNOSTICS_ENABLED=false
+      - N8N_PORT=5678
     expose:
       - 5678
     volumes:

@@ -81,10 +81,6 @@ Para evitar conflictos de dependencias y simplificar el inicio del ecosistema, s
 - **Arquitectura:** Se eliminó `railway.toml`, que estaba forzando un despliegue de un solo servicio (Flask), impidiendo que Nginx, el Dashboard y n8n se iniciaran. Al eliminarlo, Railway ahora detecta correctamente el ecosistema completo mediante `docker-compose.yml`.
 - **Nginx de Producción:**
   - Se creó `Dockerfile.nginx` para empaquetar la configuración y los archivos estáticos dentro de la imagen. Esto es necesario en Railway ya que no se pueden montar carpetas del repositorio en tiempo de ejecución.
-  - Se actualizaron los hostnames de los upstreams en `nginx.production.conf` para usar los nombres de servicio (`flask`, `dashboard`, `n8n`) en lugar de nombres de contenedor, asegurando la resolución DNS interna en Railway.
-- **Docker Compose:**
-  - Se renombró `docker-compose.production.yml` a `docker-compose.yml` para que sea el archivo principal de despliegue.
-  - El archivo `docker-compose.yml` original se conservó como `docker-compose.local.yml`.
-  - Se actualizó el servicio `nginx` para que se construya usando el nuevo `Dockerfile.nginx`.
-- **Resultado:** Con estos cambios, Nginx recupera el control del tráfico en el puerto 80/443, redirigiendo correctamente `/dashboard/` y `/workflows/` a sus respectivos contenedores, eliminando el error "Not Found".
+- **Red Interna y DNS:** Se actualizaron los upstreams en `nginx.production.conf` al formato `<servicio>.railway.internal` para cumplir con los requisitos de red privada de Railway. Además, se fijaron los puertos internos de Flask (9000), Dashboard (8501) y n8n (5678) en el `docker-compose.yml` para evitar conflictos con el puerto dinámico asignado por Railway al proxy principal.
+- **Resultado:** Nginx ahora puede localizar correctamente los servicios internos, y el tráfico se dirige al contenedor correcto siempre que el dominio esté vinculado al servicio `nginx` en el panel de Railway.
 
