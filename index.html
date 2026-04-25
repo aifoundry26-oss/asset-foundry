@@ -288,6 +288,7 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>emailjs.init("yeHyktm9tGplZevPH");</script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body class="antialiased text-[#1D1D1F] bg-[#F5F5F7]" data-role="registrado">
@@ -372,14 +373,15 @@
                 style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2rem 0 1rem;opacity:0;transition:opacity 0.6s ease;">
 
                 <!-- Título -->
-                <h1 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;text-align:center;margin:0;">
+                <h1
+                    style="font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:#1D1D1F;letter-spacing:-0.02em;text-align:center;margin:0;">
                     Esto es <span style="color:#10B981;">Asset Foundry</span>
                 </h1>
 
                 <!-- Reproductor de video -->
-                <div id="video-player-wrapper" style="position:relative;width:100%;max-width:860px;border-radius:18px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.18);background:#000;aspect-ratio:16/9;">
-                    <video id="hero-video" src="assets/video.mp4" preload="auto"
-                        style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+                <div id="video-player-wrapper"
+                    style="position:relative;width:100%;max-width:860px;border-radius:18px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.18);background:#000;aspect-ratio:16/9;">
+                    <div id="hero-youtube-player" style="width:100%;height:100%;display:block;"></div>
 
                     <!-- Controles custom del video -->
                     <div id="video-controls"
@@ -400,18 +402,22 @@
                         <div id="video-progress-bar" onclick="seekHeroVideo(event)"
                             style="flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,0.25);cursor:pointer;position:relative;">
                             <div id="video-progress-fill"
-                                style="height:100%;border-radius:4px;background:#10B981;width:0%;transition:none;pointer-events:none;"></div>
+                                style="height:100%;border-radius:4px;background:#10B981;width:0%;transition:none;pointer-events:none;">
+                            </div>
                         </div>
 
                         <!-- Tiempo -->
-                        <span id="video-time" style="font-size:0.7rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;min-width:70px;text-align:center;">0:00 / 0:00</span>
+                        <span id="video-time"
+                            style="font-size:0.7rem;color:rgba(255,255,255,0.8);font-family:'Inter',sans-serif;min-width:70px;text-align:center;">0:00
+                            / 0:00</span>
 
                         <!-- Mute/Unmute -->
                         <button id="video-mute-btn" onclick="toggleHeroMute()"
                             style="width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,0.2);backdrop-filter:blur(8px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;"
                             onmouseover="this.style.background='rgba(255,255,255,0.35)'"
                             onmouseout="this.style.background='rgba(255,255,255,0.2)'">
-                            <svg id="video-mute-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg id="video-mute-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                                 <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
                                 <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
@@ -1078,40 +1084,114 @@
         // HERO STORYTELLING CONTROLLER
         let storyScene = 1;
         const storyTotal = 7;
-        // Scene 1 = video (duration handled by video 'ended' event), scenes 2-7 = timed
+        // Scene 1 = video (duration handled by YouTube state), scenes 2-7 = timed
         const storyDurations = [0, 4000, 4000, 5000, 5000, 7000, 9000];
         let storyPlaying = true;
         let storyTimer = null;
-        let storyProgress = null;
-        let progressStart = null;
-        let progressDuration = 0;
         let heroVideoPlaying = false;
+        let ytPlayer = null;
+        let ytInterval = null;
 
         const sceneBgs = ['bg-scene-1', 'bg-scene-2', 'bg-scene-3', 'bg-scene-4', 'bg-scene-5', 'bg-scene-6', 'bg-scene-7'];
 
+        // YouTube IFrame API initialization
+        window.onYouTubeIframeAPIReady = function () {
+            ytPlayer = new YT.Player('hero-youtube-player', {
+                videoId: '6bY0rwVM9I4',
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'rel': 0,
+                    'modestbranding': 1,
+                    'iv_load_policy': 3,
+                    'disablekb': 1,
+                    'fs': 0,
+                    'playsinline': 1
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        };
+
+        function onPlayerReady(event) {
+            if (storyScene === 1 && storyPlaying) {
+                event.target.playVideo();
+            }
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.PLAYING) {
+                heroVideoPlaying = true;
+                updateVideoPlayIcon();
+                startPollingProgress();
+            } else if (event.data === YT.PlayerState.PAUSED) {
+                heroVideoPlaying = false;
+                updateVideoPlayIcon();
+                stopPollingProgress();
+            } else if (event.data === YT.PlayerState.ENDED) {
+                heroVideoPlaying = false;
+                updateVideoPlayIcon();
+                stopPollingProgress();
+                // Auto-advance to next scene when video ends
+                if (storyScene === 1 && storyPlaying) {
+                    setTimeout(() => {
+                        showStoryScene(2);
+                        startStoryTimer();
+                    }, 500);
+                }
+            }
+        }
+
+        function startPollingProgress() {
+            clearInterval(ytInterval);
+            ytInterval = setInterval(() => {
+                if (ytPlayer && ytPlayer.getCurrentTime) {
+                    const current = ytPlayer.getCurrentTime();
+                    const duration = ytPlayer.getDuration();
+                    if (duration > 0) {
+                        const pct = (current / duration) * 100;
+                        const fill = document.getElementById('video-progress-fill');
+                        if (fill) fill.style.width = pct + '%';
+
+                        // Also animate the progress bar for scene 1
+                        const progBar = document.querySelector('.prog-bar[data-bar="1"] div');
+                        if (progBar && storyScene === 1) {
+                            progBar.style.transition = 'none';
+                            progBar.style.width = pct + '%';
+                        }
+                        // Update time display
+                        const timeEl = document.getElementById('video-time');
+                        if (timeEl) {
+                            timeEl.textContent = `${formatTime(current)} / ${formatTime(duration)}`;
+                        }
+                    }
+                }
+            }, 100);
+        }
+
+        function stopPollingProgress() {
+            clearInterval(ytInterval);
+        }
+
         function showStoryScene(n) {
-            // Manage video scene visibility
             const videoScene = document.getElementById('video-scene');
             const storyGrid = document.getElementById('story-grid');
-            const heroVideo = document.getElementById('hero-video');
 
             if (n === 1) {
-                // Show video scene, hide grid
                 videoScene.style.display = 'flex';
                 storyGrid.style.display = 'none';
             } else {
-                // Hide video scene, show grid
                 videoScene.style.display = 'none';
                 videoScene.style.opacity = '0';
                 storyGrid.style.display = 'grid';
                 // Pause video when leaving scene 1
-                if (heroVideo && !heroVideo.paused) {
-                    heroVideo.pause();
-                    heroVideoPlaying = false;
+                if (ytPlayer && ytPlayer.pauseVideo) {
+                    ytPlayer.pauseVideo();
                 }
             }
 
-            // Textos (scenes 2-7 in the grid)
             document.querySelectorAll('#story-grid .story-scene').forEach(el => el.style.opacity = '0');
             if (n === 1) {
                 setTimeout(() => videoScene.style.opacity = '1', 50);
@@ -1120,13 +1200,11 @@
                 if (txt) setTimeout(() => txt.style.opacity = '1', 50);
             }
 
-            // Visuales (scenes 2-7)
             document.querySelectorAll('.story-visual').forEach(el => el.style.opacity = '0');
             if (n > 1) {
                 const vis = document.querySelector(`.story-visual[data-visual="${n}"]`);
                 if (vis) {
                     setTimeout(() => vis.style.opacity = '1', 50);
-                    // Reiniciar animaciones de la escena 6 (antes era 5)
                     if (n === 6) {
                         vis.querySelectorAll('[style*="slideInRow"]').forEach((el, i) => {
                             el.style.animation = 'none';
@@ -1138,22 +1216,17 @@
                 }
             }
 
-            // Fondo
             const bg = document.getElementById('scene-bg');
             sceneBgs.forEach(c => bg.classList.remove(c));
             bg.classList.add(sceneBgs[n - 1]);
 
-            // Progreso
             document.querySelectorAll('.prog-bar div').forEach(el => el.style.width = '0%');
-            // Llenar barras previas
             for (let i = 1; i < n; i++) {
                 const bar = document.querySelector(`.prog-bar[data-bar="${i}"] div`);
                 if (bar) bar.style.width = '100%';
             }
 
-            // Contador
             document.getElementById('scene-counter').textContent = `${n} / ${storyTotal}`;
-
             storyScene = n;
         }
 
@@ -1171,25 +1244,12 @@
             clearTimeout(storyTimer);
             if (!storyPlaying) return;
 
-            // Scene 1 = video: don't use a timer, let the video 'ended' event handle it
             if (storyScene === 1) {
-                const heroVideo = document.getElementById('hero-video');
-                if (heroVideo) {
-                    heroVideo.currentTime = 0;
-                    heroVideo.play().then(() => {
-                        heroVideoPlaying = true;
-                        updateVideoPlayIcon();
-                    }).catch(() => {
-                        // Autoplay blocked: start muted
-                        heroVideo.muted = true;
-                        updateMuteIcon();
-                        heroVideo.play().then(() => {
-                            heroVideoPlaying = true;
-                            updateVideoPlayIcon();
-                        });
-                    });
+                if (ytPlayer && ytPlayer.playVideo) {
+                    ytPlayer.seekTo(0);
+                    ytPlayer.playVideo();
                 }
-                return; // No setTimeout for scene 1
+                return;
             }
 
             const dur = storyDurations[storyScene - 1];
@@ -1232,16 +1292,11 @@
                 startStoryTimer();
             } else {
                 clearTimeout(storyTimer);
-                // Detener barra
                 const bar = document.querySelector(`.prog-bar[data-bar="${storyScene}"] div`);
                 if (bar) bar.style.transition = 'none';
-                // Pause video if on scene 1
                 if (storyScene === 1) {
-                    const heroVideo = document.getElementById('hero-video');
-                    if (heroVideo && !heroVideo.paused) {
-                        heroVideo.pause();
-                        heroVideoPlaying = false;
-                        updateVideoPlayIcon();
+                    if (ytPlayer && ytPlayer.pauseVideo) {
+                        ytPlayer.pauseVideo();
                     }
                 }
             }
@@ -1255,18 +1310,13 @@
                 : '<path d="M3 2l8 5-8 5V2z" fill="#1D1D1F"/>';
         }
 
-        // ─── VIDEO CONTROLS ───
         function toggleHeroVideo() {
-            const video = document.getElementById('hero-video');
-            if (!video) return;
-            if (video.paused) {
-                video.play();
-                heroVideoPlaying = true;
+            if (!ytPlayer || !ytPlayer.playVideo) return;
+            if (heroVideoPlaying) {
+                ytPlayer.pauseVideo();
             } else {
-                video.pause();
-                heroVideoPlaying = false;
+                ytPlayer.playVideo();
             }
-            updateVideoPlayIcon();
         }
 
         function updateVideoPlayIcon() {
@@ -1280,17 +1330,19 @@
         }
 
         function toggleHeroMute() {
-            const video = document.getElementById('hero-video');
-            if (!video) return;
-            video.muted = !video.muted;
+            if (!ytPlayer || !ytPlayer.mute) return;
+            if (ytPlayer.isMuted()) {
+                ytPlayer.unMute();
+            } else {
+                ytPlayer.mute();
+            }
             updateMuteIcon();
         }
 
         function updateMuteIcon() {
             const icon = document.getElementById('video-mute-icon');
-            const video = document.getElementById('hero-video');
-            if (!icon || !video) return;
-            if (video.muted) {
+            if (!icon || !ytPlayer) return;
+            if (ytPlayer.isMuted()) {
                 icon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
             } else {
                 icon.innerHTML = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>';
@@ -1298,12 +1350,11 @@
         }
 
         function seekHeroVideo(event) {
-            const video = document.getElementById('hero-video');
+            if (!ytPlayer || !ytPlayer.seekTo) return;
             const bar = document.getElementById('video-progress-bar');
-            if (!video || !bar) return;
             const rect = bar.getBoundingClientRect();
             const pct = (event.clientX - rect.left) / rect.width;
-            video.currentTime = pct * video.duration;
+            ytPlayer.seekTo(pct * ytPlayer.getDuration(), true);
         }
 
         function formatTime(seconds) {
@@ -1316,40 +1367,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             showStoryScene(1);
             startStoryTimer();
-
-            // Video progress and ended handling
-            const heroVideo = document.getElementById('hero-video');
-            if (heroVideo) {
-                heroVideo.addEventListener('timeupdate', () => {
-                    if (!heroVideo.duration) return;
-                    const pct = (heroVideo.currentTime / heroVideo.duration) * 100;
-                    const fill = document.getElementById('video-progress-fill');
-                    if (fill) fill.style.width = pct + '%';
-                    // Also animate the progress bar for scene 1
-                    const progBar = document.querySelector('.prog-bar[data-bar="1"] div');
-                    if (progBar && storyScene === 1) {
-                        progBar.style.transition = 'none';
-                        progBar.style.width = pct + '%';
-                    }
-                    // Update time display
-                    const timeEl = document.getElementById('video-time');
-                    if (timeEl) {
-                        timeEl.textContent = `${formatTime(heroVideo.currentTime)} / ${formatTime(heroVideo.duration)}`;
-                    }
-                });
-
-                heroVideo.addEventListener('ended', () => {
-                    heroVideoPlaying = false;
-                    updateVideoPlayIcon();
-                    // Auto-advance to next scene when video ends
-                    if (storyScene === 1 && storyPlaying) {
-                        setTimeout(() => {
-                            showStoryScene(2);
-                            startStoryTimer();
-                        }, 500);
-                    }
-                });
-            }
         });
     </script>
 

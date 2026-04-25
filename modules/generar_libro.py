@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, send_from_directory
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
@@ -20,6 +20,7 @@ import html
 # ------------------------------
 
 import io
+import os
 import re
 import base64
 
@@ -299,6 +300,10 @@ def generar_docx(titulo, contenido, portada_b64=""):
 # ══════════════════════════════════════════════════════════════════════════════
 # RUTAS FLASK
 # ══════════════════════════════════════════════════════════════════════════════
+
+@app.route("/")
+def index():
+    return send_from_directory("../", "index.html")
 
 @app.route("/health", methods=["GET"])
 def health():
@@ -805,5 +810,6 @@ def generar_resumen_pdf():
 # ══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
-    print("Servidor iniciado en http://127.0.0.1:9000")
-    app.run(host="0.0.0.0", port=9000, debug=False)
+    port = int(os.environ.get("PORT", 9000))
+    print(f"Servidor iniciado en http://127.0.0.1:{port}")
+    app.run(host="0.0.0.0", port=port, debug=False)
