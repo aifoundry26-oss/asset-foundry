@@ -30,7 +30,7 @@ COPY *.html ./
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python -c "import requests; requests.get('http://localhost:9000/health', timeout=5)" || exit 1
+    CMD python -c "import os, requests; requests.get(f'http://localhost:{os.environ.get(\"PORT\", 9000)}/health', timeout=5)" || exit 1
 
 # Run Flask with gunicorn for production (but allow override for dev)
 CMD ["python", "modules/generar_libro.py"]
