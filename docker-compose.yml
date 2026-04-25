@@ -1,3 +1,16 @@
+# =====================================================================
+# Asset Foundry — Docker Compose para Producción (Railway / VPS)
+# =====================================================================
+# Este archivo reemplaza al docker-compose.yml para despliegues en la nube.
+# Diferencias respecto al entorno local:
+#   - Sin Ngrok (Railway provee dominio público automáticamente).
+#   - Variables de entorno parametrizadas con ${DOMAIN:-localhost}.
+#   - Nginx configurado para producción con headers de seguridad.
+# =====================================================================
+# USO:
+#   docker compose -f docker-compose.production.yml up -d
+# =====================================================================
+
 version: '3.8'
 
 networks:
@@ -10,16 +23,16 @@ volumes:
 
 services:
   nginx:
-    image: nginx:alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
     container_name: asset_foundry_nginx
     ports:
-      - "80:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./:/usr/share/nginx/html:ro
+      - "${PORT:-80}:80"
     depends_on:
       flask:
         condition: service_healthy
+
     networks:
       - asset_foundry_net
     restart: unless-stopped
@@ -71,6 +84,8 @@ services:
       - asset_foundry_net
     environment:
       - PYTHONUNBUFFERED=1
+      # URL base del dominio público (para enlaces internos del dashboard)
+      - BASE_DOMAIN=${DOMAIN:-localhost}
     expose:
       - 8501
     restart: unless-stopped
@@ -87,8 +102,9 @@ services:
       - asset_foundry_net
     environment:
       - N8N_PATH=/workflows/
-      - N8N_EDITOR_BASE_URL=https://funnelform-mirta-incomparably.ngrok-free.dev/workflows/
-      - WEBHOOK_URL=https://funnelform-mirta-incomparably.ngrok-free.dev/workflows/
+      # Las URLs ahora usan el dominio de producción (Railway asigna automáticamente)
+      - N8N_EDITOR_BASE_URL=https://${DOMAIN:-localhost}/workflows/
+      - WEBHOOK_URL=https://${DOMAIN:-localhost}/workflows/
       - N8N_PROXY_HOPS=1
       - N8N_DEPLOYMENT_TYPE=single
       - NODE_ENV=production
@@ -96,8 +112,8 @@ services:
       - DB_TYPE=sqlite
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
       - N8N_DIAGNOSTICS_ENABLED=false
-    ports:
-      - "5678:5678"
+    expose:
+      - 5678
     volumes:
       - n8n_data:/home/node/.n8n
     restart: unless-stopped

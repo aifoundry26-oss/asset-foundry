@@ -77,6 +77,14 @@ Para evitar conflictos de dependencias y simplificar el inicio del ecosistema, s
   - **`dashboard.py`:** La URL del webhook de generación de libros ahora se construye dinámicamente desde la variable de entorno `BASE_DOMAIN`, con detección automática de protocolo (HTTP/HTTPS).
 - **Nota:** El `docker-compose.yml` original y `nginx.conf` se mantienen sin cambios para preservar la compatibilidad con el entorno de desarrollo local con Ngrok.
 
-**[25 de Abril de 2026] - Corrección de Rama Git para Despliegue**
-- **Git:** Se detectó un error de coincidencia de ramas (`src refspec main does not match any`) durante el primer push a GitHub. Se corrigió renombrando la rama local por defecto de `master` a `main` mediante `git branch -M main`, alineando el repositorio local con los estándares actuales de GitHub y las instrucciones de `DEPLOY.md`.
+**[25 de Abril de 2026] - Corrección de Error 404 en Railway (Despliegue Multi-servicio)**
+- **Arquitectura:** Se eliminó `railway.toml`, que estaba forzando un despliegue de un solo servicio (Flask), impidiendo que Nginx, el Dashboard y n8n se iniciaran. Al eliminarlo, Railway ahora detecta correctamente el ecosistema completo mediante `docker-compose.yml`.
+- **Nginx de Producción:**
+  - Se creó `Dockerfile.nginx` para empaquetar la configuración y los archivos estáticos dentro de la imagen. Esto es necesario en Railway ya que no se pueden montar carpetas del repositorio en tiempo de ejecución.
+  - Se actualizaron los hostnames de los upstreams en `nginx.production.conf` para usar los nombres de servicio (`flask`, `dashboard`, `n8n`) en lugar de nombres de contenedor, asegurando la resolución DNS interna en Railway.
+- **Docker Compose:**
+  - Se renombró `docker-compose.production.yml` a `docker-compose.yml` para que sea el archivo principal de despliegue.
+  - El archivo `docker-compose.yml` original se conservó como `docker-compose.local.yml`.
+  - Se actualizó el servicio `nginx` para que se construya usando el nuevo `Dockerfile.nginx`.
+- **Resultado:** Con estos cambios, Nginx recupera el control del tráfico en el puerto 80/443, redirigiendo correctamente `/dashboard/` y `/workflows/` a sus respectivos contenedores, eliminando el error "Not Found".
 

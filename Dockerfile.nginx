@@ -1,0 +1,18 @@
+FROM nginx:alpine
+
+# Copiar la configuración de producción
+# Nota: La configuración será copiada a /etc/nginx/nginx.conf en el paso de build
+COPY nginx.production.conf /etc/nginx/nginx.conf
+
+# Copiar todos los archivos estáticos al directorio de Nginx
+COPY . /usr/share/nginx/html
+
+# Limpieza: No necesitamos los archivos de configuración en el directorio publico
+RUN rm -f /usr/share/nginx/html/nginx.conf \
+    /usr/share/nginx/html/nginx.production.conf \
+    /usr/share/nginx/html/docker-compose.yml \
+    /usr/share/nginx/html/docker-compose.production.yml \
+    /usr/share/nginx/html/Dockerfile \
+    /usr/share/nginx/html/railway.toml
+
+EXPOSE 80
