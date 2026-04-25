@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, send_from_directory
 from docx import Document
 from docx.shared import Pt, RGBColor, Inches, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK
@@ -300,6 +300,10 @@ def generar_docx(titulo, contenido, portada_b64=""):
 # ══════════════════════════════════════════════════════════════════════════════
 # RUTAS FLASK
 # ══════════════════════════════════════════════════════════════════════════════
+
+@app.route("/")
+def index():
+    return send_from_directory("../", "index.html")
 
 @app.route("/health", methods=["GET"])
 def health():
